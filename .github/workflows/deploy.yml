@@ -1,9 +1,7 @@
 name: Publish Skohub Blog
 
 on:
-  push:
-    branches:
-      - main
+  push
 
 jobs:
   build:
