@@ -5,17 +5,18 @@ module.exports = {
       name: `the SkoHub Community`
     },
     description: `A blog for SkoHub.`,
-    siteUrl: `http://www.skohub.io/blog`,
+    siteUrl: `https://skohub-io.github.io/skohub-blog/`,
     email: `skohub@hbz-nrw.de`,
     social: {
       github: `skohub-io`,
     },
   },
+  pathPrefix: "/skohub-blog",
   plugins: [
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `http://www.skohub.io/blog`,
+        siteUrl: `https://skohub-io.github.io/skohub-blog/`,
       },
     },
     `gatsby-plugin-image`,
