@@ -11,7 +11,6 @@ module.exports = {
       github: `skohub-io`,
     },
   },
-  pathPrefix: "/skohub-blog",
   plugins: [
     {
       resolve: `gatsby-plugin-canonical-urls`,
