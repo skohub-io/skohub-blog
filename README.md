@@ -56,6 +56,7 @@ To create a production build and output the built static files into the public d
 
 ```
 cd skohub-blog
+npm install
 gatsby build
 ```
 
