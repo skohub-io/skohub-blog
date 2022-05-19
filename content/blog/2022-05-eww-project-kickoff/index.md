@@ -1,6 +1,6 @@
 ---
 title: Collaborating on improving SkoHub Vocabs
-date: "2022-05-20"
+date: "2022-05-19"
 description: The SkoHub team at hbz has launched a cooperation with the Hamburg-based company effective WEBWORK to work on some pending issues regarding both functionality and design of SkoHub Vocabs.
 authors: [{lastname: "Pohl",
            firstname: "Adrian",
@@ -9,7 +9,7 @@ authors: [{lastname: "Pohl",
            firstname: "Anne"}]
 ---
 
-In a Kickoff workshop, the SkoHub team at hbz yesterday has launched a cooperation with the Hamburg-based company [effective WEBWORK](https://www.effective-webwork.de/) to work on some pending issues regarding both functionality and design of [SkoHub Vocabs](https://github.com/skohub-io/skohub-vocabs). The issues and progress of the project can be followed in a [Kanban board](https://github.com/orgs/skohub-io/projects/2).
+In a kickoff workshop, the SkoHub team at hbz has launched a cooperation with the Hamburg-based company [effective WEBWORK](https://www.effective-webwork.de/) to work on some pending issues regarding both functionality and design of [SkoHub Vocabs](https://github.com/skohub-io/skohub-vocabs). The issues and progress of the project can be followed in a [Kanban board](https://github.com/orgs/skohub-io/projects/2).
 
 [![The Backlog, Ready and Working columns of the project's Kanban board as of 2022-05-19](/kanban.png)](https://github.com/orgs/skohub-io/projects/2)
 
