@@ -9,7 +9,7 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faTwitter, faMastodon } from '@fortawesome/free-brands-svg-icons'
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -20,6 +20,7 @@ const Bio = () => {
             name
           }
           social {
+            mastodon
             twitter
             github
           }
@@ -62,6 +63,26 @@ const Bio = () => {
               boxShadow: `none`,
             }}>
           <FontAwesomeIcon icon={faGithub}/>
+          </a>
+          {` | `}
+          <a href={`https://twitter.com/${social?.twitter || ``}`}
+             style={{
+              fontSize: `1.75em`,
+              padding: `0em 0.2em`,
+              color: `#005b99`,
+              boxShadow: `none`,
+          }}>
+          <FontAwesomeIcon icon={faTwitter}/>
+          </a>
+          {` | `}
+          <a href={`https://openbiblio.social/@${social?.mastodon || ``}`}
+             style={{
+              fontSize: `1.75em`,
+              padding: `0em 0.2em`,
+              color: `#3088d4`,
+              boxShadow: `none`,
+          }}>
+          <FontAwesomeIcon icon={faMastodon}/>
           </a>
         </p>
        </div>
