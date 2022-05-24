@@ -8,6 +8,8 @@ module.exports = {
     siteUrl: `https://blog.skohub.io`,
     email: `skohub@hbz-nrw.de`,
     social: {
+      mastodon: `skohub`,
+      twitter: `skohub`,
       github: `skohub-io`,
     },
   },

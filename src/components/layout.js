@@ -2,7 +2,7 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faMastodon, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 const Layout = ({ location, title, children  }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -15,6 +15,8 @@ const Layout = ({ location, title, children  }) => {
         siteMetadata {
           social {
             github
+            twitter
+            mastodon
           }
         }
       }
@@ -44,6 +46,14 @@ const Layout = ({ location, title, children  }) => {
       <Link to="/contact">Contact</Link>
       {` | `}
       <a href="http://www.skohub.io">skohub.io</a>
+      {` | `}
+      <a href={`https://openbiblio.social/@${social?.mastodon || ``}`}>
+        Mastodon <FontAwesomeIcon icon={faMastodon} style={{ color: `#3088d4`}}/>
+      </a>
+      {` | `}
+      <a href={`https://twitter.com/${social?.twitter || ``}`}>
+        Twitter <FontAwesomeIcon icon={faTwitter} style={{ color: `#005b99`}}/>
+      </a>
       {` | `}
       <a href={`https://github.com/${social?.github || ``}`}>
         GitHub <FontAwesomeIcon icon={faGithub} style={{ color: `#000`}}/>
