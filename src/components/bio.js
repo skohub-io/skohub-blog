@@ -55,6 +55,16 @@ const Bio = () => {
           This blog is maintained by <strong>{author.name}</strong>.
         </p>
         <p>
+        <a href={`https://openbiblio.social/@${social?.mastodon || ``}`}
+             style={{
+              fontSize: `1.75em`,
+              padding: `0em 0.2em`,
+              color: `#3088d4`,
+              boxShadow: `none`,
+          }}>
+          <FontAwesomeIcon icon={faMastodon}/>
+          </a>
+          {` | `}
           <a href={`https://github.com/${social?.github || ``}`}
              style={{
               fontSize: `1.75em`,
@@ -73,16 +83,6 @@ const Bio = () => {
               boxShadow: `none`,
           }}>
           <FontAwesomeIcon icon={faTwitter}/>
-          </a>
-          {` | `}
-          <a href={`https://openbiblio.social/@${social?.mastodon || ``}`}
-             style={{
-              fontSize: `1.75em`,
-              padding: `0em 0.2em`,
-              color: `#3088d4`,
-              boxShadow: `none`,
-          }}>
-          <FontAwesomeIcon icon={faMastodon}/>
           </a>
         </p>
        </div>
