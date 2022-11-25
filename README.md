@@ -32,12 +32,6 @@ nvm install 15
 nvm use 15
 ```
 
-### Install gatsby
-
-```
-npm install -g gatsby-cli
-```
-
 ## Start developing
 
 The site runs with:
@@ -45,7 +39,7 @@ The site runs with:
 ```
 cd skohub-blog
 npm install
-gatsby develop
+npm run develop
 ```
 
 The site is now running at `http://localhost:8000`!
@@ -57,13 +51,13 @@ To create a production build and output the built static files into the public d
 ```
 cd skohub-blog
 npm install
-gatsby build
+npm run build
 ```
 
 If you want to view the production build locally, run:
 
 ```
-gatsby serve
+npm run serve
 ```
 
 Once this starts, you can view your site at http://localhost:9000.
