@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faMastodon, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import skohubsvg from '../images/skohub-signet-color.svg'
 
 const Layout = ({ location, title, children  }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -28,38 +29,33 @@ const Layout = ({ location, title, children  }) => {
 
   header = (
     <div>
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
-      <Link className="header-link" to="/">
-        Blog
-      </Link>
-      {` | `}
-      <Link className="header-link" to="/about">
-        About
-      </Link>
+      <div className="skohub-logo">
+        <Link to="/"><img className="skohub-img" src={skohubsvg} alt="SkoHub" />
+        <span className="skohub-title">{title}</span></Link>
+      </div>
+      <ul className="skohub-nav">
+          <li><Link className="header-link" to="/">Blog</Link></li>
+          <li><Link className="header-link" to="/about">About</Link></li>
+          <li><Link className="header-link" to="https://skohub.io">Website</Link></li>
+      </ul>
     </div>
   )
 
   footer = (
-    <div>
-      <Link to="/contact">Contact</Link>
-      {` | `}
-      <a href="http://www.skohub.io">skohub.io</a>
-      {` | `}
-      <a href={`https://openbiblio.social/@${social?.mastodon || ``}`}>
-        Mastodon <FontAwesomeIcon icon={faMastodon} style={{ color: `#3088d4`}}/>
-      </a>
-      {` | `}
-      <a href={`https://twitter.com/${social?.twitter || ``}`}>
-        Twitter <FontAwesomeIcon icon={faTwitter} style={{ color: `#005b99`}}/>
-      </a>
-      {` | `}
-      <a href={`https://github.com/${social?.github || ``}`}>
-        GitHub <FontAwesomeIcon icon={faGithub} style={{ color: `#000`}}/>
-      </a>
-      {` | `}
-      <a href="rss.xml">Feed</a>
+    <div className="wrapper-footer">
+        <div className="footer-navigation">
+          <ul>
+            <li><Link to="/contact">Contact</Link></li>
+            <li><a href="https://skohub.io" target="_blank">skohub.io</a></li>
+            <li><a href="rss.xml">RSS-Feed</a></li>
+            <li><a href={`https://openbiblio.social/@${social?.mastodon || ``}`}>
+            Mastodon <FontAwesomeIcon icon={faMastodon}/></a></li>
+            <li><a href={`https://twitter.com/${social?.twitter || ``}`}>
+            Twitter <FontAwesomeIcon icon={faTwitter}/></a></li>
+            <li><a href={`https://github.com/${social?.github || ``}`}>
+            GitHub <FontAwesomeIcon icon={faGithub}/></a></li>
+          </ul>
+        </div>
     </div>
   )
 

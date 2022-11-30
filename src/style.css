@@ -2,16 +2,8 @@
 
 :root {
   --maxWidth-none: "none";
-  --maxWidth-xs: 20rem;
-  --maxWidth-sm: 24rem;
-  --maxWidth-md: 28rem;
-  --maxWidth-lg: 32rem;
-  --maxWidth-xl: 36rem;
-  --maxWidth-2xl: 42rem;
-  --maxWidth-3xl: 48rem;
-  --maxWidth-4xl: 56rem;
-  --maxWidth-full: "100%";
-  --maxWidth-wrapper: var(--maxWidth-2xl);
+  --maxWidth-xl: 52rem;
+  --maxWidth-wrapper: var(--maxWidth-xl);
   --spacing-px: "1px";
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -27,26 +19,14 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
-    Times, serif;
-  --font-body: var(--fontFamily-serif);
-  --font-heading: var(--fontFamily-sans);
-  --fontWeight-normal: 400;
-  --fontWeight-medium: 500;
-  --fontWeight-semibold: 600;
+  --fontWeight-normal: 300;
   --fontWeight-bold: 700;
-  --fontWeight-extrabold: 800;
-  --fontWeight-black: 900;
   --fontSize-root: 16px;
   --lineHeight-none: 1;
   --lineHeight-tight: 1.1;
   --lineHeight-normal: 1.5;
   --lineHeight-relaxed: 1.625;
   /* 1.200 Minor Third Type Scale */
-  --fontSize-0: 0.833rem;
   --fontSize-1: 1rem;
   --fontSize-2: 1.2rem;
   --fontSize-3: 1.44rem;
@@ -54,12 +34,41 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #26c884;
-  --color-text: #2e353f;
-  --color-text-light: #4f5969;
-  --color-heading: #1a202c;
-  --color-heading-black: black;
-  --color-accent: #d1dce5;
+  --color-primary: rgb(230, 0, 125);
+  --color-hover: rgb(20, 150, 140);
+  --color-text: rgb(15, 85, 75);
+  --color-text-light: rgb(20, 150, 140);
+  --color-heading: rgb(15, 85, 75);
+  --color-accent: rgb(200, 200, 200);
+  --color-white: rgb(255, 255, 255);
+}
+
+/* ubuntu-regular - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/ubuntu-v20-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('fonts/ubuntu-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/ubuntu-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/ubuntu-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/ubuntu-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/ubuntu-v20-latin-regular.svg#Ubuntu') format('svg'); /* Legacy iOS */
+}
+
+/* ubuntu-700 - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/ubuntu-v20-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('fonts/ubuntu-v20-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/ubuntu-v20-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/ubuntu-v20-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('fonts/ubuntu-v20-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/ubuntu-v20-latin-700.svg#Ubuntu') format('svg'); /* Legacy iOS */
 }
 
 /* HTML elements */
@@ -78,13 +87,11 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
+  font-family: 'Ubuntu', sans-serif;
   font-size: var(--fontSize-1);
   color: var(--color-text);
-}
-
-footer {
-  padding: var(--spacing-6) var(--spacing-0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 hr {
@@ -118,9 +125,8 @@ h6 {
 }
 
 h1 {
-  font-weight: var(--fontWeight-black);
+  font-weight: var(--fontWeight-bold);
   font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
 }
 
 h2 {
@@ -235,23 +241,76 @@ a {
 
 a:hover,
 a:focus {
-  text-decoration: none;
+  text-decoration: underline;
+  color: var(--color-hover);
 }
 
 /* Custom classes */
 
+.skohub-logo {
+  margin: 0 0 var(--spacing-3) 0;
+  display: inline-block;
+  width: 100%;
+}
+    
+.skohub-logo a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+    
+.skohub-img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+}
+  
+.skohub-title {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 0 0 var(--spacing-3);
+  font-size: var(--fontSize-6);
+  font-weight: var(--fontWeight-bold);
+}
+
+.skohub-nav {
+  list-style: none;
+  margin: var(--spacing-0);
+  padding: var(--spacing-3) 0 0 0;
+}
+
+.skohub-nav li {
+  display: inline-block;
+  margin: 0  var(--spacing-2) 0 0;
+}
+
+.skohub-nav li a {
+  display: block;
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+  font-weight: var(--fontWeight-bold);
+  text-decoration: none;
+  border-radius: 30px;
+  padding: var(--spacing-2) var(--spacing-4);
+}
+
+.skohub-nav li a:hover {
+  border: 1px solid var(--color-text-light);
+  color: var(--color-text-light);
+}
+
 .global-wrapper {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-10) var(--spacing-5);
+  padding: var(--spacing-10) var(--spacing-5) var(--spacing-0) var(--spacing-5);
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
-  margin-bottom: var(--spacing-20);
+  margin-bottom: var(--spacing-12);
 }
 
 .global-header {
-  margin-bottom: var(--spacing-12);
+  margin-bottom: var(--spacing-3);
 }
 
 .main-heading {
@@ -259,9 +318,19 @@ a:focus {
   margin: 0;
 }
 
+.blog-posts {
+  list-style: none;
+  margin: var(--spacing-0) var(--spacing-0) var(--spacing-32) var(--spacing-0);
+}
+
+.is-blog-post {
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(235,235,235,1) 0%, rgba(255,255,255,1) 70%);
+  padding: var(--spacing-8);
+}
+
 .post-list-item {
   margin-bottom: var(--spacing-8);
-  margin-top: var(--spacing-8);
 }
 
 .post-list-item p {
@@ -288,7 +357,7 @@ a:focus {
 
 .bio {
   display: flex;
-  margin-bottom: var(--spacing-16);
+  margin-bottom: var(--spacing-8);
 }
 
 .bio p {
@@ -302,7 +371,22 @@ a:focus {
   border-radius: 100%;
 }
 
-.blog-post header h1 {
+.blog-post {
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(235,235,235,1) 0%, rgba(255,255,255,1) 70%);
+  margin: var(--spacing-12) var(--spacing-0) var(--spacing-0) var(--spacing-0);
+  padding: var(--spacing-8);
+}
+
+.main-content {
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(235,235,235,1) 0%, rgba(255,255,255,1) 70%);
+  margin: var(--spacing-12) var(--spacing-0) var(--spacing-32) var(--spacing-0);
+  padding: var(--spacing-8);
+}
+
+.blog-post header h1,
+.main-content h1 {
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
 }
 
@@ -319,6 +403,64 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
+.blog-post-nav {
+  margin: var(--spacing-0) var(--spacing-0) var(--spacing-32) var(--spacing-0);
+}
+
+.blog-post-nav a {
+  display: block;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-weight: var(--fontWeight-bold);
+  text-decoration: none;
+  border-radius: 30px;
+  padding: var(--spacing-2) var(--spacing-4);
+}
+
+.blog-post-nav a:hover {
+  border: 1px solid var(--color-text-light);
+  color: var(--color-text-light);
+}
+
+.wrapper-footer {
+  margin: var(--spacing-0) auto;
+  width: 100%;
+  max-width: var(--maxWidth-wrapper);
+  padding: var(--spacing-10) var(--spacing-5) var(--spacing-0) var(--spacing-5);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.footer-navigation {
+  background: var(--color-text-light);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.footer-navigation ul {
+  margin: var(--spacing-0);
+  padding: var(--spacing-8) var(--spacing-0);
+  list-style: none;
+  text-align: center;
+}
+
+.footer-navigation li {
+  display: inline-block;
+  margin: var(--spacing-2);
+}
+
+.footer-navigation li a {
+  color: var(--color-white);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.footer-navigation li a:hover {
+  border-bottom: 1px solid var(--color-white);
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {
@@ -326,6 +468,15 @@ a:focus {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
     margin-left: var(--spacing-0);
   }
+  
+  .skohub-title {
+      font-size: var(--fontSize-5);
+  }
+
+    .footer-navigation ul {
+      padding: var(--spacing-2) var(--spacing-0);
+    }
+  
   ul,
   ol {
     list-style-position: inside;
