@@ -10,6 +10,8 @@ const About = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="About" />
+      <div className="main-content">
+      <h1>About</h1>
       <p>
       SkoHub supports a novel approach for finding content on the web. The general idea is to extend 
       the scope of Knowledge Organization Systems (KOS) to also act as communication hubs for publishers 
@@ -42,7 +44,7 @@ const About = ({ data, location }) => {
       schema and to send notifications (SkoHub Editor). The editor can also be used as a browser 
       plugin for Firefox and Chrome (SkoHub Extension).
       </p>
-
+    </div>
     </Layout>
   )
 }

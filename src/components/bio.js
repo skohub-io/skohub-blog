@@ -37,53 +37,12 @@ const Bio = () => {
 
   return (
     <div  className="bio">
-      <StaticImage
-        className="bio-avatar"
-        layout="fixed"
-        formats={["AUTO", "WEBP", "AVIF"]}
-        src="../images/skohub.png"
-        width={50}
-        height={50}
-        quality={95}
-        alt="Skohub logo"
-      />
       {author?.name && (
        <div>
         <p>
           {description}
           {` `}
           This blog is maintained by <strong>{author.name}</strong>.
-        </p>
-        <p>
-        <a href={`https://openbiblio.social/@${social?.mastodon || ``}`}
-             style={{
-              fontSize: `1.75em`,
-              padding: `0em 0.2em`,
-              color: `#3088d4`,
-              boxShadow: `none`,
-          }}>
-          <FontAwesomeIcon icon={faMastodon}/>
-          </a>
-          {` | `}
-          <a href={`https://github.com/${social?.github || ``}`}
-             style={{
-              fontSize: `1.75em`,
-              padding: `0em 0.2em`,
-              color: `#000`,
-              boxShadow: `none`,
-            }}>
-          <FontAwesomeIcon icon={faGithub}/>
-          </a>
-          {` | `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}
-             style={{
-              fontSize: `1.75em`,
-              padding: `0em 0.2em`,
-              color: `#005b99`,
-              boxShadow: `none`,
-          }}>
-          <FontAwesomeIcon icon={faTwitter}/>
-          </a>
         </p>
        </div>
       )}
