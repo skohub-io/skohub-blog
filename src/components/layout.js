@@ -47,7 +47,7 @@ const Layout = ({ location, title, children  }) => {
           <ul>
             <li><Link to="/contact">Contact</Link></li>
             <li><a href="https://skohub.io" target="_blank">skohub.io</a></li>
-            <li><a href="rss.xml">RSS-Feed</a></li>
+            <li><a href="/rss.xml">RSS-Feed</a></li>
             <li><a href={`https://openbiblio.social/@${social?.mastodon || ``}`}>
             Mastodon <FontAwesomeIcon icon={faMastodon}/></a></li>
             <li><a href={`https://twitter.com/${social?.twitter || ``}`}>
