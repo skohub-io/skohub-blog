@@ -10,7 +10,7 @@ authors: [{lastname: "Pohl",
            id: "https://lobid.org/team/sr#"}]
 ---
 
-We are happy to announce the new SkoHub logo and design we have deployed right in time for our [SWIB22 workshop](https://swib.org/swib22/programme.html#day3) on Wednesday! In the last months, Kai Mertens and effective WEBWORK helped to work out this new look. We have now implemented it for the [SkoHub website](https://skohub.io), this blog and the default [SkoHub Vocabs](https://github.com/skohub-io/skohub-vocabs) setup.
+We are happy to announce the new SkoHub logo and design we have deployed right in time for our [SWIB22 workshop](https://swib.org/swib22/programme.html#day3) on Wednesday! In the last months, Kai Mertens and effective WEBWORK helped to work out this new look in the context of the [project we have announced earlier](https://blog.skohub.io/2022-05-eww-project-kickoff/). We have now updated the [SkoHub website](https://skohub.io), this blog and the default [SkoHub Vocabs](https://github.com/skohub-io/skohub-vocabs) setup to incorporate the new logo and design.
 
 Here is an [example](https://w3id.org/kim/hochschulfaechersystematik/scheme) of how a vocabulary built with SkoHub Vocabs will look now with this default design:
 
