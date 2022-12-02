@@ -15,7 +15,6 @@
     "gatsby-plugin-canonical-urls": "^3.11.0",
     "gatsby-plugin-feed": "^3.0.0",
     "gatsby-plugin-gatsby-cloud": "^2.0.0",
-    "gatsby-plugin-google-analytics": "^3.0.0",
     "gatsby-plugin-image": "^1.0.0",
     "gatsby-plugin-manifest": "^3.0.0",
     "gatsby-plugin-offline": "^4.0.0",
