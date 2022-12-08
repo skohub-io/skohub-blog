@@ -24,7 +24,6 @@ const Layout = ({ location, title, children  }) => {
     }
   `)
   const social = data.site.siteMetadata?.social
-  const email = data.site.siteMetadata.email
 
 
   header = (
@@ -46,7 +45,7 @@ const Layout = ({ location, title, children  }) => {
         <div className="footer-navigation">
           <ul>
             <li><Link to="/contact">Contact</Link></li>
-            <li><a href="https://skohub.io" target="_blank">skohub.io</a></li>
+            <li><a href="https://skohub.io" target="_blank" rel="noreferrer">skohub.io</a></li>
             <li><a href="/rss.xml">RSS-Feed</a></li>
             <li><a href={`https://openbiblio.social/@${social?.mastodon || ``}`}>
             Mastodon <FontAwesomeIcon icon={faMastodon}/></a></li>
