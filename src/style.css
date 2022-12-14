@@ -461,6 +461,13 @@ a:focus {
   border-bottom: 1px solid var(--color-white);
 }
 
+.svg-inline--fa {
+	display: var(--fa-display, inline-block);
+	height: 1em;
+	overflow: visible;
+	vertical-align: -0.125em;
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {

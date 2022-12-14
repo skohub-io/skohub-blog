@@ -20,16 +20,14 @@ Download and install the latest Node.js version from [the official Node.js websi
 
 #### Unix
 
-Download the lastest nvm version.
-```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
-```
+[Install the lastest nvm version](https://github.com/nvm-sh/nvm#installing-and-updating).
 
-Set default Node.js version. When nvm is installed, it does not default to a particular node version. You’ll need to install the version you want and give nvm instructions to use it. This example uses the version 15 release, but more recent version numbers can be used instead.
+Set default Node.js version. When nvm is installed, it does not default to a particular node version. You’ll need to install the version you want and give nvm instructions to use it.
+See [here](https://github.com/nvm-sh/nvm#bash) to automatically switch to the correct node version (not necessary, but handy).
 
 ```
-nvm install 15
-nvm use 15
+nvm install 18
+nvm use 18
 ```
 
 ## Start developing
