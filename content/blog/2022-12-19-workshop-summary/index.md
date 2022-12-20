@@ -74,7 +74,7 @@ After the workshop we transferred the [skohub-reconcile](https://github.com/skoh
 ## Final thoughts
 
 The workshop was a great event to discuss with SkoHub users and those who want to be. We collected valuable feedback and ideas for development in the upcoming two years.
-Especially the sudden rise in awareness for the Fediverse opens up interesting use cases for SkoHub PubSub, which we are happy to engage in. The highglight of the workshop was the presentation of Andreas' reconciliation prototype and its transfer in the SkoHub organization. This is a good example for the benefits of open source and use case driven development.
+Especially the sudden rise in awareness for the Fediverse opens up interesting use cases for SkoHub PubSub, which we are happy to engage in. The highlight of the workshop was the presentation of Andreas' reconciliation prototype and its transfer in the SkoHub organization. This is a good example for the benefits of open source and use case driven development.
 
 We are looking forward to future community events, more use cases and even more modules to be developed in the SkoHub ecosystem.
 
