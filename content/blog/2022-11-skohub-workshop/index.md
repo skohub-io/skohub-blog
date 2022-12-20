@@ -1,7 +1,7 @@
 ---
 title: Things are moving at SkoHub
 date: "2022-11-04"
-description: We welcome a new team member in the Open Infrastrucutre team at the Hochschulbibliothekszentrum NRW who will be working on SkoHub and invite people to a SkoHub planning workshop.
+description: We welcome a new team member in the Open Infrastructure team at the Hochschulbibliothekszentrum NRW who will be working on SkoHub and invite people to a SkoHub planning workshop.
 authors: [{lastname: "Pohl",
            firstname: "Adrian",
            id: "http://lobid.org/team/ap#" },
@@ -10,7 +10,7 @@ authors: [{lastname: "Pohl",
            id: "https://lobid.org/team/sr#"}]
 ---
 
-In this blog post we want to introduce to you a new member in the Open Infrastrucutre team at the Hochschulbibliothekszentrum NRW who will be working on SkoHub as well as invite you to a workshop to present and discuss our future plans for the SkoHub project.
+In this blog post we want to introduce to you a new member in the Open Infrastructure team at the Hochschulbibliothekszentrum NRW who will be working on SkoHub as well as invite you to a workshop to present and discuss our future plans for the SkoHub project.
 
 After some time with not much happening (or even with shutting down some SkoHub services), we are happy to inform about a lot of movement in the space. We already [announced](https://blog.skohub.io/2022-05-eww-project-kickoff/) the current project with the effective WEBWORK team to develop a new logo, improve the design and fix some minor issues in SkoHub. We are happy about the improvements made. Watch this space for more details in an upcoming post.
 
