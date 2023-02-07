@@ -40,6 +40,12 @@ npm install
 npm run develop
 ```
 
+Or make use of Docker:
+
+```
+docker compose up
+```
+
 The site is now running at `http://localhost:8000`!
 
 ## Build
