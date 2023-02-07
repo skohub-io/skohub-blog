@@ -9,9 +9,6 @@ COPY --chown=node:node package-lock.json .
 
 USER node
 
-# don't run prepare step with husky
-#RUN npm pkg delete scripts.prepare
-
 RUN npm i --legacy-peer-deps
 
 EXPOSE 8000
