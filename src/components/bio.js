@@ -18,7 +18,6 @@ const Bio = () => {
           }
           social {
             mastodon
-            twitter
             github
           }
           description

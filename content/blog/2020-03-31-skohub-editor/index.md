@@ -202,4 +202,4 @@ Furthermore, some work will have to be put into the current default schema and t
 
 ## Get involved
 
-Please try it out and let us know what doesn't work or which feature you are missing and also what you like about SkoHub. We are happy about every bug report, suggestion and feature requests for the production version. Get in [contact](https://lobid.org/team-en/) with us via a hypothes.is annotation, GitHub, Email, Twitter or IRC.
+Please try it out and let us know what doesn't work or which feature you are missing and also what you like about SkoHub. We are happy about every bug report, suggestion and feature requests for the production version. Get in [contact](https://lobid.org/team-en/) with us via a hypothes.is annotation, GitHub, Email, Mastodon or IRC.
