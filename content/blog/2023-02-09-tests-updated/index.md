@@ -6,7 +6,7 @@ authors: [{lastname: "Rörtgen",
            id: "https://lobid.org/team/sr#"}]
 ---
 
-For quite some time we have been adding new features to SkoHub Vocabs like [switching languages](https://github.com/skohub-io/skohub-vocabs/issues/79), display of all relevant properties on the concept page and [support for `skos:Collection`](https://github.com/skohub-io/skohub-vocabs/issues/159). Unfortunately there were no tests added to actually test these new functionalities. This led to some surprises now and then, for example when we noticed that at one point that language tags did not show up when visiting a Collection page directly.
+For quite some time we have been adding new features to SkoHub Vocabs like [switching languages](https://github.com/skohub-io/skohub-vocabs/issues/79), display of all relevant properties on the concept page and [support for `skos:Collection`](https://github.com/skohub-io/skohub-vocabs/issues/159). Unfortunately there were no tests added to actually test these new functionalities. This led to some surprises now and then, for example when we noticed that at one point language tags did not show up when visiting a Collection page directly.
 
 Originally SkoHub Vocabs already contained some tests, so being the maintainer of SkoHub Vocabs I decided to follow up on that and got myself a little bit more familiar on the topic. Quickly I stumbled over the topic of [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development) (TDD) and though I heard of it before, I decided to dive a little deeper and check, if that pattern might be appropriate for SkoHub Vocabs and the other SkoHub modules (and maybe my coding approaches in general).
 
@@ -24,7 +24,7 @@ This leads to the following development cycle:
 
 2. **Run tests**: The tests should now fail. If not, it might be the case that the actual feature is already present in the code and no further code needs to be written. Maybe documentation has to be updated accordingly.
 
-3. **Write the simplest code that passes the new tests**: The code can (and should) later be refactored, so it can be ugly at this point. 
+3. **Write the simplest code that passes the new tests**: The code can (and should) later be refactored, so it can be ugly at this point.
 
 4. **All tests should now pass**: If the code is still failing it should be revised till all tests pass.
 
