@@ -87,6 +87,7 @@ html {
 }
 
 body {
+  counter-reset: figcaption;
   font-family: 'Ubuntu', sans-serif;
   font-size: var(--fontSize-1);
   color: var(--color-text);
@@ -161,6 +162,16 @@ h5 > a,
 h6 > a {
   text-decoration: none;
   color: inherit;
+}
+
+
+figcaption {
+  text-align: center;
+}
+
+figcaption::before {
+  counter-increment: figcaption;
+  content: "Figure " counter(figcaption) ": ";
 }
 
 /* Prose */
