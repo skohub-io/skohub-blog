@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: "/skohub-blog",
   siteMetadata: {
     title: `Skohub Blog`,
     author: {
@@ -10,6 +9,7 @@ module.exports = {
     email: `skohub@hbz-nrw.de`,
     social: {
       mastodon: `skohub`,
+      twitter: `skohub`,
       github: `skohub-io`,
     },
   },
