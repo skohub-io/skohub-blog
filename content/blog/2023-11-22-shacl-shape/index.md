@@ -83,9 +83,9 @@ Severity of error:  http://www.w3.org/ns/shacl#Violation
 
 ### Community
 
-Thanks to a lightning talk held by Adrian Pohl at [SWIB23](https://swib.org/swib23/programme.html) we got some attention to the shape.
-Suggestions made Jakob Voß, Osma Suominen and Antoine Isaac already greatly improved the shape.
-Further suggestions and improvements are highly welcomed as well as your use cases for such a shape.
+Thanks to a lightning talk at SWIB23 ([slides](https://pad.gwdg.de/p/0ytHDo597), [recording](https://www.youtube.com/watch?v=jzdU1zHKlNU)) we got some attention to the shape.
+Suggestions made by Jakob Voß, Osma Suominen and Antoine Isaac already greatly improved the shape.
+Further suggestions and improvements as well as your use cases are highly welcome.
 
 ## Outlook
 
