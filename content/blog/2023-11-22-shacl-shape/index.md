@@ -81,6 +81,12 @@ Node, where the error occured:  http://w3id.org/example-cs/
 Severity of error:  http://www.w3.org/ns/shacl#Violation
 ```
 
+### Community
+
+Thanks to a lightning talk held by Adrian Pohl at [SWIB23](https://swib.org/swib23/programme.html) we got some attention to the shape.
+Suggestions made Jakob Voß, Osma Suominen and Antoine Isaac already greatly improved the shape.
+Further suggestions and improvements are highly welcomed as well as your use cases for such a shape.
+
 ## Outlook
 
 We were quite a bit surprised that we did not find any usable existing SKOS SHACL shape.
