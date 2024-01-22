@@ -131,6 +131,12 @@ After selecting the appropritate matches we have successfully reconciled our dat
 ![Matched values in OpenRefine column](./or7.png)
 
 
+## Further reads
+
+Christel Annemieke Romein, Andreas Wagner and Joris J. van Zundert published a tutorial about [building and deploying a classification schema using open standards and technology](https://doi.org/10.21825/dlh.85751).
+In this tutorial they make use of SKOS, SkoHub Vocabs and SkoHub Reconcile.
+We recommend having a look to see the use of SkoHub services in action.
+
 ## Next steps
 
 The services are currently in an `alpha` phase and ready for testing.
