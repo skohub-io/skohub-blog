@@ -46,8 +46,9 @@ But overall this resulted in a much reduced size of the built vocabularies and m
 
 This new internationalization approach brings lots of improvements:
 
-- ...
-
+- SkoHub Vocabs is now independent from the underlying webserver
+- The size of the vocabularies is drastically reduced, especially for vocabularies with lots of languages
+- [SkoHub Docker Vocabs](https://github.com/skohub-io/skohub-docker-vocabs) is now simpler to setup since we only have "normal" `index.html` files that it knows how to handle
 
 ## What to do if I'm running my own webhook server?
 
