@@ -1,6 +1,6 @@
 ---
 title: Re-working SkoHub Vocabs internationalization featues
-date: "2024-01-30"
+date: "2024-01-31"
 authors: [{lastname: "Rörtgen",
            firstname: "Steffen",
            id: "https://lobid.org/team/sr#"}]
