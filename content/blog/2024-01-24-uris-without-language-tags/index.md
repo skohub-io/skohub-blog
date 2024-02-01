@@ -1,5 +1,5 @@
 ---
-title: Re-working SkoHub Vocabs internationalization featues
+title: Re-working SkoHub Vocabs internationalization features
 date: "2024-01-31"
 authors: [{lastname: "Rörtgen",
            firstname: "Steffen",
