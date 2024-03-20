@@ -3,62 +3,60 @@ title: Publishing SKOS the easy way
 date: "2024-03-21"
 authors: [{lastname: "Rörtgen",
            firstname: "Steffen",
-           id: "https://lobid.org/team/sr#"}]
+           id: "https://lobid.org/team/sr#"},
+           {lastname: "Pohl",
+           firstname: "Adrian",
+           id: "https://lobid.org/team/ap#"}]
 ---
 
 ## A simple workflow for publishing your SKOS vocab
 
 With [SkoHub Pages](https://github.com/skohub-io/skohub-pages) we now provide a very simple way for publishing your SKOS vocabulary from a GitHub repository. It only involves 5-6 steps:
 
-### 1 Fork the skohub-pages repo.
+**1. [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository) the [skohub-pages repo](https://github.com/skohub-io/skohub-pagesS).**
 
-⚠️ **Uncheck the box to only fork the main branch**.
+⚠️ In the process, pay attention to unchecking the box "Copy the `main`branch only"
 
-![Create fork, uncheck to only fork main branch](./create_fork.png)
+![Create fork, uncheck to also fork the `gh-pages` branch](./create_fork.png)
 
-### 2 Activate GitHub Actions
+**2. Activate GitHub Actions**
 
-Go to "Actions" tab and if not already activated, activate GitHub Actions.
+![Go to "Actions" tab and if not already activated, activate GitHub Actions.](./activate_action.png)
 
-### 3 Configue GitHub Pages branch
+**3. Configure GitHub Pages branch**
 
 Go to "Settings", navigate to the "Pages" setting and select `gh-pages` as the branch your site is being built from.
 
 ![Set gh-pages branch](./set_gh_pages.png)
 
-### 4 Update pages URL
+**4. Update pages URL**
 
 Go back to the main page of your repo and click the little gear icon in the top right of the "About" section. Check the box at "Use your GitHub Pages website".
 
 ![Edit "About" section of the repository](./click_gear_icon.png)
 ![Set URL of repository](./use_gh_pages_website.png)
 
-### 5 Start committing
+**5. Start committing**
 
 Add a commit to the main branch and your vocabulary will be automatically published (sometimes it takes a little to see the changes, remember to do some hard refreshing).
 
-### (6) Set your GitHub Pages URL as namespace
+**6. Set your GitHub Pages URL as namespace (optional)**
 
 See section "Resolving custom domains" below ⬇️
 
 
 ## Utilizing GitHub Actions & Pages
 
-Not all projects or individuals involved in the creation of controlled vocabularies are able or have the resources to run their own infrastructure.
-Therefore, some time ago we pursued an approach that also makes it possible to use [SkoHub Vocabs](https://github.com/skohub-io/skohub-vocabs) based only on GitHub infrastructure.
-The workflow is documented in the [SkoHub Pages](https://github.com/skohub-io/skohub-pages) repository.
-To make this happen, we utilize "[GitHub Pages](https://docs.github.com/de/pages/getting-started-with-github-pages)" and "[GitHub Actions](https://docs.github.com/en/actions)"
-With GitHub Pages it is possible to host websites on the GitHub infrastructure.
-GitHub Actions are used for automated tests and deployments.
+As not all projects or individuals involved in the creation of controlled vocabularies are able or have the resources to run their own infrastructure, we have been pursuing this approach to utilize Docker and GitHub infrastructure for publishing SKOS vocabularies with [SkoHub Vocabs](https://github.com/skohub-io/skohub-vocabs). Specifically, the workflow relies on "[GitHub Pages](https://docs.github.com/de/pages/getting-started-with-github-pages)" and "[GitHub Actions](https://docs.github.com/en/actions)". With GitHub Pages it is possible to host websites on the GitHub infrastructure, GitHub Actions are used for automated tests and deployments.
 
-We have written a "GitHub Action" that ensures that a process is started after each push to the repository, which builds the vocabularies with SkoHub Vocabs.
-The built vocabulary is then pushed to a separate git branch "gh-pages".
-"GitHub Pages" in turn is configured to deliver HTML pages from this "gh-pages" branch.
+We have written [a GitHub Action](https://github.com/skohub-io/skohub-pages/blob/main/.github/workflows/main.yml) that ensures that a process is started after each push to the repository, which builds the vocabularies with SkoHub Vocabs.
+The built vocabulary is then pushed to a separate git branch `gh-pages`.
+GitHub Pages in turn is configured to deliver HTML pages from this `gh-pages` branch.
 
-We have also used this approach in various workshops to introduce SKOS and SkoHub.
-However, the workflow required some adjustments in the GitHub action, so that some errors could quickly creep in.
+We have been using this approach in various introduction to SKOS and SkoHub workshops.
+However, in the past the workflow required some adjustments in the GitHub action, so that some errors could quickly creep in.
 
-We are happy to having improved this considerably! 🎉
+We are happy to having improved this considerably and made the process much less error-prone! 🎉
 
 The relevant information is now set directly as environment variables and all other customizations can be changed via the GitHub GUI, so the workflow is now much more user-friendly.
 
@@ -110,7 +108,8 @@ colour:blue a skos:Concept ;
 
 Feel free to try out our simplified approach and let us know if something does not work: <https://github.com/skohub-io/skohub-pages>
 
-## Outlook: Supporting other forges
+## Outlook: Supporting other forges than GitHub
 
-There are lots of reasons why people might not want to use GitHub infrastructure owned by Microsoft for their SKOS publication workflows. That's why we will be looking into replacing as much as possible by generic git-based tooling for triggering the build and will think about providing alternatives for building vocabs on Microsoft servers: https://github.com/skohub-io/skohub-pages/issues/19
+There are lots of reasons why people might not want to use GitHub infrastructure owned by Microsoft for their SKOS publication workflows. That's why we will be looking into replacing as much as possible by generic git-based tooling for triggering the build to support such a workflow on other forges like GitLab or Forgejo. This work will be happening around this issue: https://github.com/skohub-io/skohub-pages/issues/19
 
+Let us know if you have some good implementation ideas or more wishes for future development!
