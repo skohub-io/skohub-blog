@@ -8,7 +8,7 @@ authors: [{lastname: "Rörtgen",
 
 ## A simple workflow for publishing your SKOS vocab
 
-With SkoHub Pages we now provide a very simple way for publishing your SKOS vocabulary from a GitHub repository. It only involves [5-6 steps](https://github.com/skohub-io/skohub-pages#usage):
+With [SkoHub Pages](https://github.com/skohub-io/skohub-pages) we now provide a very simple way for publishing your SKOS vocabulary from a GitHub repository. It only involves 5-6 steps.
 
 ### Fork the skohub-pages repo. 
 
