@@ -113,3 +113,4 @@ Feel free to try out our simplified approach and let us know if something does n
 ## Outlook: Supporting other forges
 
 There are lots of reasons why people might not want to use GitHub infrastructure owned by Microsoft for their SKOS publication workflows. That's why we will be looking into replacing as much as possible by generic git-based tooling for triggering the build and will think about providing alternatives for building vocabs on Microsoft servers: https://github.com/skohub-io/skohub-pages/issues/19
+
