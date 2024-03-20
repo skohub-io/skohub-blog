@@ -8,32 +8,38 @@ authors: [{lastname: "Rörtgen",
 
 ## A simple workflow for publishing your SKOS vocab
 
-With [SkoHub Pages](https://github.com/skohub-io/skohub-pages) we now provide a very simple way for publishing your SKOS vocabulary from a GitHub repository. It only involves 5-6 steps.
+With [SkoHub Pages](https://github.com/skohub-io/skohub-pages) we now provide a very simple way for publishing your SKOS vocabulary from a GitHub repository. It only involves 5-6 steps:
 
-### Fork the skohub-pages repo. 
+### 1 Fork the skohub-pages repo.
 
-**Uncheck the box to only fork the main branch**.
+⚠️ **Uncheck the box to only fork the main branch**.
 
+![Create fork, uncheck to only fork main branch](./create_fork.png)
 
-### Activate GitHub Actions
+### 2 Activate GitHub Actions
 
 Go to "Actions" tab and if not already activated, activate GitHub Actions.
 
-### Configue GitHub Pages branch
+### 3 Configue GitHub Pages branch
 
-Go to "Settings", navigate to the "Pages" setting and select `gh-pages` as the branch your site is being built from. 
+Go to "Settings", navigate to the "Pages" setting and select `gh-pages` as the branch your site is being built from.
 
-## Update pages URL
+![Set gh-pages branch](./set_gh_pages.png)
+
+### 4 Update pages URL
 
 Go back to the main page of your repo and click the little gear icon in the top right of the "About" section. Check the box at "Use your GitHub Pages website".
 
-## Start committing
+![Edit "About" section of the repository](./click_gear_icon.png)
+![Set URL of repository](./use_gh_pages_website.png)
+
+### 5 Start committing
 
 Add a commit to the main branch and your vocabulary will be automatically published (sometimes it takes a little to see the changes, remember to do some hard refreshing).
 
-## Set your GitHub Pages URL as namespace
+### (6) Set your GitHub Pages URL as namespace
 
-See below
+See section "Resolving custom domains" below ⬇️
 
 
 ## Utilizing GitHub Actions & Pages
