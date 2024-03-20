@@ -13,11 +13,11 @@ authors: [{lastname: "Rörtgen",
 
 With [SkoHub Pages](https://github.com/skohub-io/skohub-pages) we now provide a very simple way for publishing your SKOS vocabulary from a GitHub repository. It only involves 5-6 steps:
 
-**1. [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository) the [skohub-pages repo](https://github.com/skohub-io/skohub-pagesS).**
+**1. Fork the skohub-pages repo.**
 
-⚠️ In the process, pay attention to unchecking the box "Copy the `main`branch only"
+Click the "Fork" button in the top-right corner of the [SkoHub Pages repo](https://github.com/skohub-io/skohub-pages). You can change the name of your fork to whatever you like, e.g. `my-shiny-vocab`. See also the [GitHub fork documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository).
 
-![Create fork, uncheck to also fork the `gh-pages` branch](./create_fork.png)
+![Create fork, uncheck box ⚠️ to also fork the `gh-pages` branch](./create_fork.png)
 
 **2. Activate GitHub Actions**
 
@@ -38,7 +38,7 @@ Go back to the main page of your repo and click the little gear icon in the top 
 
 **5. Start committing**
 
-Add a commit to the main branch and your vocabulary will be automatically published (sometimes it takes a little to see the changes, remember to do some hard refreshing).
+Now you can add a commit to the main branch adjusting the example vocabularies or adding a new turtle file. The changes will automatically be published to your GitHub pages website that is now linked at the top-right of your GitHub repo (sometimes it takes a little to see the changes, remember to do some hard refreshing).
 
 **6. Set your GitHub Pages URL as namespace (optional)**
 
@@ -65,26 +65,26 @@ But that's not all!
 ## Resolving custom domains
 
 Although with the presented approach the custom vocabulary could be provided without own infrastructure, the domains did not resolve to the GitHub pages.
-This means that a concept scheme with an `@base` based on the GitHub Pages domain (e.g. `https://skohub-io.github.io/skohub-docker-vocabs/`) could not be resolved so far, which is why we recommended setting up a redirect via [w3id](https://w3id.org/) or [purl.org](https://purl.archive.org/).
+This means that a concept scheme with an `@base` based on the GitHub Pages domain (e.g. `https://myhandle.github.io/skohub-pages/`) could not be resolved so far, which is why we recommended setting up a redirect via [w3id](https://w3id.org/) or [purl.org](https://purl.archive.org/).
 It still makes sense to set up a redirect (in case the vocabulary moves somewhere else), but it is now also possible to use the domain that is assigned via GitHub Pages.
 
 To do this, a [`config.yaml`](https://github.com/skohub-io/skohub-pages/blob/main/config.yaml) must be created in the repo.
 The respective domain must then be entered under the `custom_domain`.
-Example: Your GitHub Pages domain is: https://skohub-io.github.io/skohub-docker-vocabs/ Then provide https://skohub-io.github.io/skohub-docker-vocabs/ as `custom_domain` in your config.yaml.
+Example: Your GitHub Pages domain is: https://myhandle.github.io/skohub-pages/ Then provide https://myhandle.github.io/skohub-pages/ as `custom_domain` in your config.yaml.
 
-The base of your concept scheme could then be something like: https://skohub-io.github.io/skohub-docker-vocabs/colours/
+The base of your concept scheme could then be something like: https://myhandle.github.io/skohub-pages/myvocab/
 
 ```yaml
 #config.yaml
 ---
 # [...]
-custom_domain: "https://skohub-io.github.io/skohub-docker-vocabs/"
+custom_domain: "https://myhandle.github.io/skohub-pages/"
 #[...]
 ```
 
 ```turtle
 # colors.ttl
-@prefix colour: <https://skohub-io.github.io/skohub-docker-vocabs/colours/> .
+@prefix colour: <https://myhandle.github.io/skohub-pages/myvocab/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -106,7 +106,7 @@ colour:blue a skos:Concept ;
     skos:topConceptOf colour: .
 ```
 
-Feel free to try out our simplified approach and let us know if something does not work: <https://github.com/skohub-io/skohub-pages>
+Feel free to try out our simplified approach and let us know if something does not work: <https://github.com/skohub-io/skohub-pages/issues/new>
 
 ## Outlook: Supporting other forges than GitHub
 
