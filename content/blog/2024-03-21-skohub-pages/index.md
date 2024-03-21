@@ -47,7 +47,7 @@ See section "Resolving custom domains" below ⬇️
 
 ## Utilizing GitHub Actions & Pages
 
-As not all projects or individuals involved in the creation of controlled vocabularies are able or have the resources to run their own infrastructure, we have been pursuing this approach to utilize Docker and GitHub infrastructure for publishing SKOS vocabularies with [SkoHub Vocabs](https://github.com/skohub-io/skohub-vocabs). Specifically, the workflow relies on "[GitHub Pages](https://docs.github.com/de/pages/getting-started-with-github-pages)" and "[GitHub Actions](https://docs.github.com/en/actions)". With GitHub Pages it is possible to host websites on the GitHub infrastructure, GitHub Actions are used for automated tests and deployments.
+Not all projects or individuals involved in the creation of controlled vocabularies are able or have the resources to run their own infrastructure. Thus, we have been pursuing this approach – formerly under the name of "skohub-docker-vocabs" – to utilize Docker and GitHub infrastructure for publishing SKOS vocabularies with [SkoHub Vocabs](https://github.com/skohub-io/skohub-vocabs). Specifically, the workflow relies on "[GitHub Pages](https://docs.github.com/de/pages/getting-started-with-github-pages)" and "[GitHub Actions](https://docs.github.com/en/actions)". With GitHub Pages it is possible to host websites on the GitHub infrastructure, GitHub Actions are used for automated tests and deployments.
 
 We have written [a GitHub Action](https://github.com/skohub-io/skohub-pages/blob/main/.github/workflows/main.yml) that ensures that a process is started after each push to the repository which builds the vocabularies with SkoHub Vocabs.
 The built vocabulary is then pushed to a separate git branch `gh-pages`.
