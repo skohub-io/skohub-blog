@@ -2,7 +2,7 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faMastodon } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faMastodon, faDiscourse } from '@fortawesome/free-brands-svg-icons'
 import skohubsvg from '../images/skohub-signet-color.svg'
 
 const Layout = ({ location, title, children  }) => {
@@ -17,6 +17,7 @@ const Layout = ({ location, title, children  }) => {
           social {
             github
             mastodon
+            discourse
           }
         }
       }
@@ -48,6 +49,8 @@ const Layout = ({ location, title, children  }) => {
             <li><a href="/rss.xml">RSS-Feed</a></li>
             <li><a href={`https://openbiblio.social/@${social?.mastodon || ``}`}>
             Mastodon <FontAwesomeIcon icon={faMastodon}/></a></li>
+            <li><a href={`${social?.discourse || ``}`}>
+            Discourse <FontAwesomeIcon icon={faDiscourse}/></a></li>
             <li><a href={`https://github.com/${social?.github || ``}`}>
             GitHub <FontAwesomeIcon icon={faGithub}/></a></li>
           </ul>

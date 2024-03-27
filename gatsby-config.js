@@ -11,6 +11,7 @@ module.exports = {
       mastodon: `skohub`,
       twitter: `skohub`,
       github: `skohub-io`,
+      discourse: "https://metadaten.community/c/software-und-tools/metafacture/8",
     },
   },
   plugins: [
