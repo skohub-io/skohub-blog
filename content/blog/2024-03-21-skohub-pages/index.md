@@ -38,7 +38,7 @@ Go back to the main page of your repo and click the little gear icon in the top 
 
 **5. Start committing**
 
-Now you can add a commit to the main branch adjusting the example vocabularies or adding a new turtle file. The changes will automatically be published to your GitHub pages website that is now linked at the top-right of your GitHub repo (sometimes it takes a little to see the changes, remember to do some hard refreshing).
+Now you can add a commit to the main branch adjusting the example vocabularies or adding a new turtle file. The changes will automatically be published to your GitHub pages website that is now linked at the top-right of your GitHub repo (sometimes it takes a little to see the changes, remember to do some hard refreshing). As an example, you can take a look at the two small example vocabularies in the skohub-pages repo that are built at https://skohub-io.github.io/skohub-pages/.
 
 **6. Set your GitHub Pages URL as namespace (optional)**
 
