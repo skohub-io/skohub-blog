@@ -1,5 +1,5 @@
 ---
-title: How to add automatic SHACL validation to your vocabs
+title: Automatic SHACL validation for SKOS vocabs
 date: "2024-04-18"
 authors: [{lastname: "Rörtgen",
            firstname: "Steffen",
@@ -12,10 +12,10 @@ authors: [{lastname: "Rörtgen",
 ## How to add automatic SHACL validation to your vocabs
 
 To ensure the quality of your vocabularies, you might want to add some automatic validation, just like one is able to run automatic software tests before a merge request.
-With the SHACL shapes developed in our [shapes repository](https://github.com/skohub-io/shapes) this is no easily possible.
+Such a validation step can easily be set up with the SHACL shapes in the [SkoHub Shapes repository](https://github.com/skohub-io/shapes).
 
-All you have to do is adding the [following GitHub Action](https://github.com/skohub-io/shapes/?tab=readme-ov-file#add-validation-in-a-vocabulary-repository) to your vocabularies.
-Add a `.github/workflows/main.yaml` file:
+All you have to do is adding the [following GitHub Action config](https://github.com/skohub-io/shapes/?tab=readme-ov-file#add-validation-in-a-vocabulary-repository) to your vocabularies.
+In the `.github/workflows/main.yaml` file, add the following steps:
 
 ```yaml
 name: Validate TTL Files
