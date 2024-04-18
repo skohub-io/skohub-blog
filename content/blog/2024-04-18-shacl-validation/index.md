@@ -11,9 +11,13 @@ authors: [{lastname: "Rörtgen",
 
 ## How to add automatic SHACL validation to your vocabs
 
-To ensure the quality of your vocabularies, you might want to add some automatic validation, just like one is able to run automatic software tests before a merge request.
-Such a validation step can easily be set up with the SHACL shapes in the [SkoHub Shapes repository](https://github.com/skohub-io/shapes).
+If you are using SkoHub to publish your vocabularies, we want to show you an easy solution to add some validation to your vocabulary repository to ensure the quality of your vocabularies.
+You can also use this approach, if you are not using SkoHub, but still want to ensure some basic constraints that we set up in the [`skohub.shacl.ttl`](https://github.com/skohub-io/shapes/blob/main/skohub.shacl.ttl) shape, e.g. that every `skos:Concept` should have at least one `skos:prefLabel` (which is not required by the SKOS Reference).
+Feel free to read the shape file.
+The `sh:message`s should give you a good explanation of what is tested with this shape.
+The `sh:severity` attribute shows you if the contraint will give a warning or a violation.
 
+Such a validation step can easily be set up with the SkoHub SHACL shape in the [SkoHub Shapes repository](https://github.com/skohub-io/shapes).
 All you have to do is adding the [following GitHub Action config](https://github.com/skohub-io/shapes/?tab=readme-ov-file#add-validation-in-a-vocabulary-repository) to your vocabularies.
 In the `.github/workflows/main.yaml` file, add the following steps:
 
