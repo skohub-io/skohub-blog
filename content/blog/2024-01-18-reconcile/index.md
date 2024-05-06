@@ -26,15 +26,14 @@ We also added support for [v0.2 of the reconciliation spec](https://www.w3.org/c
 
 ## SkoHub Reconcile Publish
 
-To make it easy to upload vocabularies to the reconciliation service a front-end was develped which you can try out at [https://reconcile-publish.skohub.io/](https://reconcile-publish.skohub.io/).
+To make it easy to upload vocabularies to the reconciliation service a front-end was developed which you can try out at [https://reconcile-publish.skohub.io/](https://reconcile-publish.skohub.io/).
 
 ![The reconcile-publish upload UI](./reconcile-publish.png)
 
 Every vocabulary that passes the SkoHub SHACL Shape (see our [blog post](https://blog.skohub.io/2023-11-22-shacl-shape/)) should work for uploading to the reconcile service.
 The only additional requirement is to provide a `vann:preferredNamespaceUri`.
-As you can see in the screenshot you also have to provide an account and a language.
-As for the account you can currently choose whatever you want, just make sure it is unique enough, so your dataset (i.e. your vocabulary) does not get overwritten by someone else.
-Since a `lang` parameter has only been available since the [current draft](https://reconciliation-api.github.io/specs/draft/#service-manifest) version of the reconciliation specification and not yet implemented in SkoHub Reconcile, the current version of the SkoHub Reconcile service requires you to specify a language you want to use for reconciliation. We will improve this in the future along with the development of the specification.
+To be able to upload your vocabulary, you need first to sign in using an ORCID or Wikimedia account. This ensures, all your uploaded vocabs are associated with your account and nobody else is able to overwrite a vocabulary.
+As you can see in the screenshot you also have to provide a language. Since a `lang` parameter has only been available since the [current draft](https://reconciliation-api.github.io/specs/draft/#service-manifest) version of the reconciliation specification and not yet implemented in SkoHub Reconcile, the current version of the SkoHub Reconcile service requires you to specify a language you want to use for reconciliation. We will improve this in the future along with the development of the specification.
 
 ## Example: Usage in OpenRefine
 
@@ -43,58 +42,58 @@ Let's see how we can use the service with OpenRefine.
 First, we upload the vocabulary.
 We will use a classification of [subject groups](https://w3id.org/kim/hochschulfaechersystematik/scheme).
 
-![The filled in upload form with "test" as account name, "de" as language  and "systematik.ttl" as file to be uploaded](./upload.png)
+![The filled in upload form with a login via Wikimedia, "de" as language  and a link to hochschulfaechersystematik.ttl on gitHub as file to be uploaded](./upload.png)
 
 After a successful upload of the [turtle file](https://raw.githubusercontent.com/dini-ag-kim/hochschulfaechersystematik/master/hochschulfaechersystematik.ttl), we are presented with a URI that leads to the ["Service Manifest"](https://reconciliation-api.github.io/specs/draft/#service-manifest) of our reconciliation service.
 
 ![The URL of the Service Manifest being returned by the upload UI](./upload-success.png)
 
-If we follow the URL <https://reconcile.skohub.io/reconcile?language=de&account=test&dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme> we see some data that services will use for reconciliation against our vocabulary:
+If we follow the URL <https://reconcile.skohub.io/reconcile?language=de&account=171687&dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme> we see some data that services will use for reconciliation against our vocabulary:
 
 ```json
 {
-    "versions": [
-        "0.2",
-        "0.3.0-alpha"
-    ],
-    "name": "SkoHub reconciliation service for account 'test', dataset 'https://w3id.org/kim/hochschulfaechersystematik/scheme'",
-    "identifierSpace": "https://w3id.org/kim/hochschulfaechersystematik/",
-    "schemaSpace": "http://www.w3.org/2004/02/skos/core#",
-    "defaultTypes": [
-        {
-            "id": "ConceptScheme",
-            "name": "ConceptScheme"
-        },
-        {
-            "id": "Concept",
-            "name": "Concept"
-        }
-    ],
-    "view": {
-        "url": "{{id}}"
-    },
-    "preview": {
-        "url": "https://reconcile.skohub.io/preview?language=de&account=test&dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&id={{id}}",
-        "width": 100,
-        "height": 320
-    },
-    "suggest": {
-        "entity": {
-            "service_url": "https://reconcile.skohub.io",
-            "service_path": "/suggest?language=de&account=test&dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&service=entity",
-            "flyout_service_path": "/suggest/flyout?language=de&account=test&dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&id=${id}"
-        },
-        "property": {
-            "service_url": "https://reconcile.skohub.io",
-            "service_path": "/suggest?language=de&account=test&dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&service=property",
-            "flyout_service_path": "/suggest/flyout?language=de&account=test&dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&id=${id}"
-        },
-        "type": {
-            "service_url": "https://reconcile.skohub.io",
-            "service_path": "/suggest?language=de&account=test&dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&service=property",
-            "flyout_service_path": "/suggest/flyout&language=de&account=test&dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&id=${id}"
-        }
-    }
+   "versions":[
+      "0.2",
+      "0.3.0-alpha"
+   ],
+   "name":"SkoHub reconciliation service for account '171687', dataset 'https://w3id.org/kim/hochschulfaechersystematik/scheme'",
+   "identifierSpace":"https://w3id.org/kim/hochschulfaechersystematik/",
+   "schemaSpace":"http://www.w3.org/2004/02/skos/core#",
+   "defaultTypes":[
+      {
+         "id":"ConceptScheme",
+         "name":"ConceptScheme"
+      },
+      {
+         "id":"Concept",
+         "name":"Concept"
+      }
+   ],
+   "view":{
+      "url":"{{id}}"
+   },
+   "preview":{
+      "url":"https://reconcile.skohub.io/preview?language=de&account=171687&dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&id={{id}}",
+      "width":100,
+      "height":320
+   },
+   "suggest":{
+      "entity":{
+         "service_url":"https://reconcile.skohub.io",
+         "service_path":"/suggest?language=de&account=171687&dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&service=entity",
+         "flyout_service_path":"/suggest/flyout?language=de&account=171687&dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&id=${id}"
+      },
+      "property":{
+         "service_url":"https://reconcile.skohub.io",
+         "service_path":"/suggest?language=de&account=171687&dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&service=property",
+         "flyout_service_path":"/suggest/flyout?language=de&account=171687&dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&id=${id}"
+      },
+      "type":{
+         "service_url":"https://reconcile.skohub.io",
+         "service_path":"/suggest?language=de&account=171687&dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&service=property",
+         "flyout_service_path":"/suggest/flyout&language=de&account=171687&dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&id=${id}"
+      }
+   }
 }
 ```
 
@@ -110,7 +109,7 @@ By clicking on the dropdown button of the column we want to reconcile, we choose
 
 After clicking "Add standard service", we can enter the url we were provided with by the upload service:
 
-![Adding the Service Manifest URL in OpenRefine](./or3.png)
+![Adding the Service Manifest URL in OpenRefine](./or03.png)
 
 Then we just have to start the reconciliation by clicking "Start reconciling..." and our reconciliation service will be queried with the terms in our OpenRefine project.
 We are then presented with the results:
@@ -148,5 +147,7 @@ Our next step will be integrating the above mentioned `lang` parameter to be abl
 
 ## Repositories
 
-- [SkoHub Reconcile](https://github.com/skohub-io/skohub-reconcile/)
-- [SkoHub Reconcile Publish](https://github.com/skohub-io/skohub-reconcile-publish/)
+- [skoHub-reconcile](https://github.com/skohub-io/skohub-reconcile/)
+- [skoHub-reconcile-publish](https://github.com/skohub-io/skohub-reconcile-publish/)
+
+\[Edit 2024-05-06: Adjusted some screenshots and text to account for some changes in the UI.\]
