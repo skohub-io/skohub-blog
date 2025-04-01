@@ -1,0 +1,287 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 5.5.0"/><meta name="theme-color" content="#26c884"/><meta data-react-helmet="true" name="description" content="An introducatory post to SkoHub Editor."/><meta data-react-helmet="true" property="og:title" content="Presenting the SkoHub Editor"/><meta data-react-helmet="true" property="og:description" content="An introducatory post to SkoHub Editor."/><meta data-react-helmet="true" property="og:type" content="website"/><style data-href="/styles.7d6cd8f07fdbd498b042.css" data-identity="gatsby-global-css">@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-8d7d79679b70dbe27172b6460e7a7910.woff2) format("woff2"),url(/static/montserrat-latin-100-ec38980a9e0119a379e2a9b3dbb1901a.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e279051046ba1286706adc886cf1c96b.woff2) format("woff2"),url(/static/montserrat-latin-100italic-3b325a3173c8207435cd1b76e19bf501.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-9d266fbbfa6cab7009bd56003b1eeb67.woff2) format("woff2"),url(/static/montserrat-latin-200-2d8ba08717110d27122e54c34b8a5798.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-6e5b3756583bb2263eb062eae992735e.woff2) format("woff2"),url(/static/montserrat-latin-200italic-a0d6f343e4b536c582926255367a57da.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-00b3e893aab5a8fd632d6342eb72551a.woff2) format("woff2"),url(/static/montserrat-latin-300-ea303695ceab35f17e7d062f30e0173b.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-56f34ea368f6aedf89583d444bbcb227.woff2) format("woff2"),url(/static/montserrat-latin-300italic-54b0bf2c8c4c12ffafd803be2466a790.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-b71748ae4f80ec8c014def4c5fa8688b.woff2) format("woff2"),url(/static/montserrat-latin-400-0659a9f4e90db5cf51b50d005bff1e41.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-6eed6b4cbb809c6efc7aa7ddad6dbe3e.woff2) format("woff2"),url(/static/montserrat-latin-400italic-7583622cfde30ae49086d18447ab28e7.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-091b209546e16313fd4f4fc36090c757.woff2) format("woff2"),url(/static/montserrat-latin-500-edd311588712a96bbf435fad264fff62.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-c90ced68b46050061d1a41842d6dfb43.woff2) format("woff2"),url(/static/montserrat-latin-500italic-5146cbfe02b1deea5dffea27a5f2f998.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-0480d2f8a71f38db8633b84d8722e0c2.woff2) format("woff2"),url(/static/montserrat-latin-600-b77863a375260a05dd13f86a1cee598f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-cf46ffb11f3a60d7df0567f8851a1d00.woff2) format("woff2"),url(/static/montserrat-latin-600italic-c4fcfeeb057724724097167e57bd7801.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-7dbcc8a5ea2289d83f657c25b4be6193.woff2) format("woff2"),url(/static/montserrat-latin-700-99271a835e1cae8c76ef8bba99a8cc4e.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-c41ad6bdb4bd504a843d546d0a47958d.woff2) format("woff2"),url(/static/montserrat-latin-700italic-6779372f04095051c62ed36bc1dcc142.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-db9a3e0ba7eaea32e5f55328ace6cf23.woff2) format("woff2"),url(/static/montserrat-latin-800-4e3c615967a2360f5db87d2f0fd2456f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-bf45bfa14805969eda318973947bc42b.woff2) format("woff2"),url(/static/montserrat-latin-800italic-fe82abb0bcede51bf724254878e0c374.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-e66c7edc609e24bacbb705175669d814.woff2) format("woff2"),url(/static/montserrat-latin-900-8211f418baeb8ec880b80ba3c682f957.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-4454c775e48152c1a72510ceed3603e2.woff2) format("woff2"),url(/static/montserrat-latin-900italic-efcaa0f6a82ee0640b83a0916e6e8d68.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-fc117160c69a8ea0851b26dd14748ee4.woff2) format("woff2"),url(/static/merriweather-latin-300-58b18067ebbd21fda77b67e73c241d3b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-fe29961474f8dbf77c0aa7b9a629e4bc.woff2) format("woff2"),url(/static/merriweather-latin-300italic-23c3f1f88683618a4fb8d265d33d383a.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-d9479e8023bef9cbd9bf8d6eabd6bf36.woff2) format("woff2"),url(/static/merriweather-latin-400-040426f99ff6e00b86506452e0d1f10b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-2de7bfeaf08fb03d4315d49947f062f7.woff2) format("woff2"),url(/static/merriweather-latin-400italic-79db67aca65f5285964ab332bd65f451.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-4b08e01d805fa35d7bf777f1b24314ae.woff2) format("woff2"),url(/static/merriweather-latin-700-22fb8afba4ab1f093b6ef9e28a9b6e92.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-cd92541b177652fffb6e3b952f1c33f1.woff2) format("woff2"),url(/static/merriweather-latin-700italic-f87f3d87cea0dd0979bfc8ac9ea90243.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-f813fc6a4bee46eda5224ac7ebf1b7be.woff2) format("woff2"),url(/static/merriweather-latin-900-5d4e42cb44410674acd99153d57df032.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-b7901d85486871c1779c0e93ddd85656.woff2) format("woff2"),url(/static/merriweather-latin-900italic-9647f9fdab98756989a8a5550eb205c3.woff) format("woff")}
+
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{-webkit-text-size-adjust:100%;line-height:1.15}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden]{display:none}:root{--maxWidth-none:"none";--maxWidth-xl:52rem;--maxWidth-wrapper:var(--maxWidth-xl);--spacing-px:"1px";--spacing-0:0;--spacing-1:0.25rem;--spacing-2:0.5rem;--spacing-3:0.75rem;--spacing-4:1rem;--spacing-5:1.25rem;--spacing-6:1.5rem;--spacing-8:2rem;--spacing-10:2.5rem;--spacing-12:3rem;--spacing-16:4rem;--spacing-20:5rem;--spacing-24:6rem;--spacing-32:8rem;--fontWeight-normal:300;--fontWeight-bold:700;--fontSize-root:16px;--lineHeight-none:1;--lineHeight-tight:1.1;--lineHeight-normal:1.5;--lineHeight-relaxed:1.625;--fontSize-1:1rem;--fontSize-2:1.2rem;--fontSize-3:1.44rem;--fontSize-4:1.728rem;--fontSize-5:2.074rem;--fontSize-6:2.488rem;--fontSize-7:2.986rem;--color-primary:#e6007d;--color-hover:#14968c;--color-text:#0f554b;--color-text-light:#14968c;--color-heading:#0f554b;--color-accent:#c8c8c8;--color-white:#fff}@font-face{font-family:Ubuntu;font-style:normal;font-weight:400;src:url(/static/ubuntu-v20-latin-regular-5fa0d860656d0e40c0861657b07f82e0.eot);src:local(""),url(/static/ubuntu-v20-latin-regular-5fa0d860656d0e40c0861657b07f82e0.eot?#iefix) format("embedded-opentype"),url(/static/ubuntu-v20-latin-regular-2f02effe392a63dc07a5cdf187b2ef09.woff2) format("woff2"),url(/static/ubuntu-v20-latin-regular-6a317272decf6d2470386df117732fa6.woff) format("woff"),url(/static/ubuntu-v20-latin-regular-254e551b53a2ccebe384cd3af3a50c22.ttf) format("truetype"),url(/static/ubuntu-v20-latin-regular-f00252d5cc9aed7459bd59a61c740eba.svg#Ubuntu) format("svg")}@font-face{font-family:Ubuntu;font-style:normal;font-weight:700;src:url(/static/ubuntu-v20-latin-700-e7cf86fbe61557f0dcd34f4489f86840.eot);src:local(""),url(/static/ubuntu-v20-latin-700-e7cf86fbe61557f0dcd34f4489f86840.eot?#iefix) format("embedded-opentype"),url(/static/ubuntu-v20-latin-700-7ceec6fd3e7d00630b2568986c915532.woff2) format("woff2"),url(/static/ubuntu-v20-latin-700-6788e6ed863a8e559ef28b3913554383.woff) format("woff"),url(/static/ubuntu-v20-latin-700-fc38f31d636ef7ea94b75741b6d493c8.ttf) format("truetype"),url(/static/ubuntu-v20-latin-700-b0c73ddaf0479ad915d9ad30e1f4a5a7.svg#Ubuntu) format("svg")}*,:after,:before{box-sizing:border-box}html{font-size:var(--fontSize-root);line-height:var(--lineHeight-normal)}body,html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body{color:var(--color-text);counter-reset:figcaption;font-family:Ubuntu,sans-serif;font-size:var(--fontSize-1)}hr{background:var(--color-accent);border:0;height:1px}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);letter-spacing:-.025em;line-height:var(--lineHeight-tight);margin-bottom:var(--spacing-6);margin-top:var(--spacing-12)}h2,h3,h4,h5,h6{color:var(--color-heading)}h1,h2,h3,h4,h5,h6{font-weight:var(--fontWeight-bold)}h1{font-size:var(--fontSize-6)}h2{font-size:var(--fontSize-5)}h3{font-size:var(--fontSize-4)}h4{font-size:var(--fontSize-3)}h5{font-size:var(--fontSize-2)}h6{font-size:var(--fontSize-1)}h1>a,h2>a,h3>a,h4>a,h5>a,h6>a{color:inherit;text-decoration:none}figcaption{text-align:center}figcaption:before{content:"Figure " counter(figcaption) ": ";counter-increment:figcaption}p{--baseline-multiplier:0.179;--x-height-multiplier:0.35;line-height:var(--lineHeight-relaxed);margin:var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0)}ol,p,ul{padding:var(--spacing-0)}ol,ul{list-style-image:none;margin-bottom:var(--spacing-8);margin-left:var(--spacing-4);margin-right:var(--spacing-0)}ol li,ul li{padding-left:var(--spacing-0)}li>p,ol li,ul li{margin-bottom:calc(var(--spacing-8)/2)}li :last-child{margin-bottom:var(--spacing-0)}li>ul{margin-left:var(--spacing-8);margin-top:calc(var(--spacing-8)/2)}blockquote{border-left:var(--spacing-1) solid var(--color-primary);color:var(--color-text-light);font-size:var(--fontSize-2);font-style:italic;margin-bottom:var(--spacing-8);margin-left:var(--spacing-4);margin-right:var(--spacing-8);padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6)}blockquote>:last-child{margin-bottom:var(--spacing-0)}blockquote>ol,blockquote>ul{list-style-position:inside}table{border-collapse:collapse;border-spacing:.25rem;margin-bottom:var(--spacing-8);width:100%}table thead tr th{border-bottom:1px solid var(--color-accent)}a{color:var(--color-primary)}a:focus,a:hover{color:var(--color-hover);text-decoration:underline}.skohub-logo{display:inline-block;margin:0 0 var(--spacing-3) 0;width:100%}.skohub-logo a{color:var(--color-text);text-decoration:none}.skohub-img{height:50px;width:50px}.skohub-img,.skohub-title{display:inline-block;vertical-align:middle}.skohub-title{font-size:var(--fontSize-6);font-weight:var(--fontWeight-bold);padding:0 0 0 var(--spacing-3)}.skohub-nav{list-style:none;margin:var(--spacing-0);padding:var(--spacing-3) 0 0 0}.skohub-nav li{display:inline-block;margin:0 var(--spacing-2) 0 0}.skohub-nav li a{border:1px solid var(--color-text);border-radius:30px;color:var(--color-text);display:block;font-weight:var(--fontWeight-bold);padding:var(--spacing-2) var(--spacing-4);text-decoration:none}.skohub-nav li a:hover{border:1px solid var(--color-text-light);color:var(--color-text-light)}.global-wrapper{margin:var(--spacing-0) auto;max-width:var(--maxWidth-wrapper);padding:var(--spacing-10) var(--spacing-5) var(--spacing-0) var(--spacing-5)}.global-wrapper[data-is-root-path=true] .bio{margin-bottom:var(--spacing-12)}.global-header{margin-bottom:var(--spacing-3)}.main-heading{font-size:var(--fontSize-7);margin:0}.blog-posts{list-style:none;margin:var(--spacing-0) var(--spacing-0) var(--spacing-32) var(--spacing-0)}.is-blog-post{background:linear-gradient(180deg,#ebebeb,#fff 70%);border-radius:30px;padding:var(--spacing-8)}.post-list-item{margin-bottom:var(--spacing-8)}.post-list-item p{margin-bottom:var(--spacing-0)}.post-list-item h2{color:var(--color-primary);font-size:var(--fontSize-4);margin-bottom:var(--spacing-2);margin-top:var(--spacing-0)}.post-list-item header{margin-bottom:var(--spacing-4)}.header-link{font-family:var(--font-heading);font-size:var(--fontSize-2);font-weight:var(--fontWeight-bold);text-decoration:none}.bio{display:flex;margin-bottom:var(--spacing-8)}.bio p,.bio-avatar{margin-bottom:var(--spacing-0)}.bio-avatar{border-radius:100%;margin-right:var(--spacing-4);min-width:50px}.blog-post{margin:var(--spacing-12) var(--spacing-0) var(--spacing-0) var(--spacing-0)}.blog-post,.main-content{background:linear-gradient(180deg,#ebebeb,#fff 70%);border-radius:30px;padding:var(--spacing-8)}.main-content{margin:var(--spacing-12) var(--spacing-0) var(--spacing-32) var(--spacing-0)}.blog-post header h1,.main-content h1{margin:var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0)}.blog-post header p{font-family:var(--font-heading);font-size:var(--fontSize-2)}.blog-post-nav ul{margin:var(--spacing-0)}.gatsby-highlight{margin-bottom:var(--spacing-8)}.blog-post-nav{margin:var(--spacing-0) var(--spacing-0) var(--spacing-32) var(--spacing-0)}.blog-post-nav a{border:1px solid var(--color-primary);border-radius:30px;color:var(--color-primary);display:block;font-weight:var(--fontWeight-bold);padding:var(--spacing-2) var(--spacing-4);text-decoration:none}.blog-post-nav a:hover{border:1px solid var(--color-text-light);color:var(--color-text-light)}.wrapper-footer{bottom:0;left:50%;margin:var(--spacing-0) auto;max-width:var(--maxWidth-wrapper);padding:var(--spacing-10) var(--spacing-5) var(--spacing-0) var(--spacing-5);position:fixed;transform:translate(-50%);width:100%}.footer-navigation{background:var(--color-text-light);border-top-left-radius:30px;border-top-right-radius:30px}.footer-navigation ul{list-style:none;margin:var(--spacing-0);padding:var(--spacing-8) var(--spacing-0);text-align:center}.footer-navigation li{display:inline-block;margin:var(--spacing-2)}.footer-navigation li a{border-bottom:1px solid transparent;color:var(--color-white);text-decoration:none}.footer-navigation li a:hover{border-bottom:1px solid var(--color-white)}.svg-inline--fa{display:var(--fa-display,inline-block);height:1em;overflow:visible;vertical-align:-.125em}@media (max-width:42rem){blockquote{margin-left:var(--spacing-0);padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4)}.skohub-title{font-size:var(--fontSize-5)}.footer-navigation ul{padding:var(--spacing-2) var(--spacing-0)}ol,ul{list-style-position:inside}}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><link rel="canonical" href="https://blog.skohub.io/2020-03-31-skohub-editor/" data-baseprotocol="https:" data-basehost="blog.skohub.io"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="alternate" type="application/rss+xml" title="SkoHub Blog&#x27;s RSS Feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=3b68e7175ff10cac1dc50da0827ce2e1" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=3b68e7175ff10cac1dc50da0827ce2e1"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=3b68e7175ff10cac1dc50da0827ce2e1"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=3b68e7175ff10cac1dc50da0827ce2e1"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=3b68e7175ff10cac1dc50da0827ce2e1"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=3b68e7175ff10cac1dc50da0827ce2e1"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=3b68e7175ff10cac1dc50da0827ce2e1"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=3b68e7175ff10cac1dc50da0827ce2e1"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=3b68e7175ff10cac1dc50da0827ce2e1"/><title data-react-helmet="true">Presenting the SkoHub Editor | Skohub Blog</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><div><div class="skohub-logo"><a href="/"><img class="skohub-img" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI3LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyMjYuOCAyMjYuOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjI2LjggMjI2Ljg7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMTQ5NjhDO30KPC9zdHlsZT4KPGc+Cgk8Zz4KCQk8Zz4KCQkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTE4OS43LDEyMy41TDU1LjksNDQuOUM0Mi45LDM3LjIsMjMuMiwyMywxOS41LDBsLTguOSwxNS43Yy0yOC4xLDQ5LjQsNi44LDc2LDI2LjYsODcuNmwxMzMuOCw3OC42CgkJCQljMTMsNy42LDMyLjcsMjEuOCwzNi41LDQ0LjlsOC45LTE1LjdDMjQ0LjQsMTYxLjYsMjA5LjQsMTM1LDE4OS43LDEyMy41eiIvPgoJCTwvZz4KCQk8Zz4KCQkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTAsMTM4Ljl2MzEuMmMwLDMxLjIsMjUuNSw1Ni43LDU2LjcsNTYuN2g3MS45TDMyLDE3MEMyMS44LDE2NCw3LjUsMTU0LDAsMTM4Ljl6Ii8+CgkJPC9nPgoJCTxnPgoJCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTcwLjEsMEg5OC4ybDk2LjYsNTYuN2MxMC4yLDYsMjQuNSwxNiwzMiwzMS4yVjU2LjdDMjI2LjgsMjUuNSwyMDEuMywwLDE3MC4xLDB6Ii8+CgkJPC9nPgoJPC9nPgo8L2c+Cjwvc3ZnPgo=" alt="SkoHub"/><span class="skohub-title">Skohub Blog</span></a></div><ul class="skohub-nav"><li><a class="header-link" href="/">Blog</a></li><li><a class="header-link" href="/about/">About</a></li><li><a href="https://skohub.io" class="header-link">Website</a></li></ul></div></header><main><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">Presenting the SkoHub Editor</h1><p>March 31, 2020<span> | <span>Adrian<!-- --> <!-- -->Pohl<!-- -->, </span><span>Felix<!-- --> <!-- -->Ostrowski</span></span></p></header><section itemProp="articleBody"><hr>
+<p>ⓘ <strong>Update, 2022-03-01</strong>: <em>Due to lacking resources for maintenance, we decided to shut down the SkoHub Editor demo for an indefinite time. However, the <a href="https://github.com/skohub-io/skohub-editor">code</a> is still there for anybody to set up their own instance.</em></p>
+<hr>
+<p>In a <a href="http://blog.lobid.org/2019/09/27/presenting-skohub-vocabs.html">previous blog post</a> we presented a first SkoHub module: <em>SkoHub Vocabs</em>. Before talking about another module, first a short summary of the features SkoHub Vocabs offers. Basically, it provides an editorial workflow to publish a SKOS vocabulary on the web which can then be consumed by humans and applications. It builds on git-based online software development platforms (currently GitHub and GitLab are supported) where you maintain a SKOS vocabulary as a Turtle file. This allows you to use all the associated features such as branches and pull requests for a full-fledged review process. With every new commit in a branch, triggered by a webhook, SkoHub Vocabs will build a static site for the vocab – with HTML for human consumption and JSON-LD for consumption by applications.</p>
+<p>In this post, we present <em>SkoHub Editor</em> (<a href="https://skohub.io/editor/"><del>demo</del></a>, <a href="https://github.com/skohub-io/skohub-editor">code</a>) that is accompanied by a browser extension. In a nutshell, SkoHub Editor enables the automatic generation of a web form based on a JSON schema, along with the possibility to look up terms in a controlled vocabulary that is published with SkoHub Vocabs. Additionally, metadata generated by the editor can be published using SkoHub PubSub, which we will describe in an upcoming post. Let’s take a look at the specifics by configuring an editor that lets you create JSON-LD describing an open educational resource (OER) on the web.</p>
+<h2>Describing a resource with the browser extension</h2>
+<p>Let’s start with actually using SkoHub Editor. You will have the most comfortable experience when using the SkoHub browser extension that wraps the SkoHub Editor and pre-populates some field in the web form. The browser extension is available both for <a href="https://addons.mozilla.org/en-US/firefox/addon/skohub-extension/">Firefox</a> and <a href="https://chrome.google.com/webstore/detail/skohub/ghalhmcgaicdcpmdicinaegnoanfmggd">Chrome</a>. Just add the extension to your browser and a little icon will be shown on the right-hand side of your navigation bar:</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/2b8d11bca715d365580506508d352f7a/63ec5/extension-icon.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 15.18987341772152%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAIAAAAcOLh5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAjElEQVQI1zXNQRKDIAxAUe9/mfYGHa1oSQIoISqChaXH6NgZ3+rvfiOBObBn75zVoBHRGIMAiEhEiMAw+Ns8TRJkTynlTETNi0CprlfdMPZk0Bia/ph59v6KIMtNllWWa7cya62b/fiKCCLGGHPOpZRaLtu2lVLO86y1ppScc2QtqMFbM7/H+Hx82vYHYBSTRpcqu6YAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="The SkoHub extension icon in between other extensions in the Firefox nav bar"
+        title="The SkoHub extension icon in between other extensions in the Firefox nav bar"
+        src="/static/2b8d11bca715d365580506508d352f7a/f058b/extension-icon.png"
+        srcset="/static/2b8d11bca715d365580506508d352f7a/c26ae/extension-icon.png 158w,
+/static/2b8d11bca715d365580506508d352f7a/6bdcf/extension-icon.png 315w,
+/static/2b8d11bca715d365580506508d352f7a/f058b/extension-icon.png 630w,
+/static/2b8d11bca715d365580506508d352f7a/63ec5/extension-icon.png 812w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">The SkoHub extension icon in between other extensions in the Firefox nav bar</figcaption>
+  </figure></p>
+<p>While having any web page open, you can now open the SkoHub editor in your browser to describe that web resource. Let’s use as an example the YouTube video <a href="https://www.youtube.com/watch?v=ZaiDDOZcaqc">“COVID-19 – 6 Dangerous Coronavirus Myths, Busted by World Health Organization”</a> published recently by the World Economic Forum under a CC-BY license. Open the video in your browser, click on the extension and you will see that several fields are automatically filled out.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/ec0c8783a270bd477ef034281c1c4796/29114/prepopulated-webform.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACnklEQVQozx2O20tTcQDH94dED0UkEgWCDz1pRih4qSlakTM3NufOfTvt7JwtZ7XpdDNTRNLhjRQ1MwozgyhXim2agUG99JCXqbv9ds7Z2dntnJWxvnwePi8f+CpAMHh8EARxFgDAcxzHchzL8nwiEksAwLEgHo8DlmUzydT473X069zDwJL146J2ec7+7o0ik82OPBnQaGCoVU+p1HdUBo/D9XxqZG6UnO9D7RTdDtPTE5Mz49OvAh9f//o2/90/s+N/trPl3VhTJASBMZLNevOthtaWq9XllTcxtfbtcOMMeX6BvrDQV61WaVyPeqyMfcu/mUlnU6lMVpJFWT4MRwqxlSBhi7NNg7Zcq6lW3tVhTrOmYUJ3bh4vnsWKKG2jy+FBDIZAYCMhCFEAYgDwPH8cCisSCYHu7CE63Eab29HtacOdZdftVUpCXVlqqynxQGrMyDBd/QaTfTuwHY2B/WAweHTEcnw4Ei3ErsFR99CYe2hscXkFMXbV3tD39fQyhFFTq3RCkNc7QXcPKpuxFy/f5/N5PiEISTGdziQEoXB7xbfu+7n7eY/9sscu+X90Ogddzseq+iZtfR2hQ6z4vfomXZ1S9WF1TZIkUUyl0ulsLieIogLEYhTF9Hunn07NDgyPeCdnb2sdJWXa0tKqi6dPFV+qvXxFdfZMUUV5hc/3SRTFcCTK8byQTPKCoOB4HqWsFoq20VbGQnfYu0xmB0E+YOwek4kmzZ1Wey9JUpABXl31JUUxCgDL8XGWY3leIcv5zRB7zArZnCTLspTLyVJOlqW8LJ0U9vfk5M9/OZFkeXf/YD94eBQKRWIgKaYUMNYOwQYUNyG4EcOJAoQRw3EMR1EcQVAEQRAMRwwQBGOEAUZJs4Wx3dfqEbVa8w+jHqtDtRlU5QAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="SkoHub extension in the sidebar of the browser with fields &#39;URL&#39;, &#39;Title&#39; and &#39;Description&#39; being pre-populated"
+        title="SkoHub extension in the sidebar of the browser with fields &#39;URL&#39;, &#39;Title&#39; and &#39;Description&#39; being pre-populated"
+        src="/static/ec0c8783a270bd477ef034281c1c4796/f058b/prepopulated-webform.png"
+        srcset="/static/ec0c8783a270bd477ef034281c1c4796/c26ae/prepopulated-webform.png 158w,
+/static/ec0c8783a270bd477ef034281c1c4796/6bdcf/prepopulated-webform.png 315w,
+/static/ec0c8783a270bd477ef034281c1c4796/f058b/prepopulated-webform.png 630w,
+/static/ec0c8783a270bd477ef034281c1c4796/40601/prepopulated-webform.png 945w,
+/static/ec0c8783a270bd477ef034281c1c4796/78612/prepopulated-webform.png 1260w,
+/static/ec0c8783a270bd477ef034281c1c4796/29114/prepopulated-webform.png 1920w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">SkoHub extension in the sidebar of the browser with fields &#39;URL&#39;, &#39;Title&#39; and &#39;Description&#39; being pre-populated</figcaption>
+  </figure></p>
+<p>We can now add additional metadata by selecting a type (<code class="language-text">VideoObject</code> in this case), add a creator, creation date, language etc. As we mentioned, you can look up a subject from a controlled vocabulary for some fields in the web form. You will experience this when inputting content into the fields “Subject”, “License”, “Learning Resource Type”, and “Intended Audience”. For those fields you will get a drop down with suggestions from a controlled vocabulary, e.g. for “Subject” from a German <a href="https://w3id.org/kim/hochschulfaechersystematik/scheme">classification</a> of subjects in Higher education that is published with SkoHub Vocabs.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 458px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/6417112bfbd5cb40999e9ce1d97b7b82/f7a31/auto-suggestion-from-skos-vocab.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 79.11392405063292%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAACaUlEQVQ4y6WUW2+bQBCF/f//VNWoVaXIMZj7slwXbO5rcOLEjh9ONQMkVaM+1dLR7gIevj1nlk3btpBSoqkb/M/v9n7H+HzBZhxHqEIhzmJUbY2mbzGMGnrUPK7S/xDdO00ab7cbppdXbK7XK6bzhJ+Pv/Dt4QHff/6AE/hwQwHvD9HaFasCHum65XvYWQam8xnnyxs29/sdWmvYngvTtmG5DgzLgmHt8fi0xdYwsDV2eDINmLYFw7awdxwed3sTYRwjKwr0esSZCOu6RhAEUGWFrDiwUlWyoiSDkDFElCDOFJK84Ov58gzdG8aZrO31XLDXJ6R5gSjN4XgBHJ8kuIhMUsRZzoX9UHJRT0iIKEaqCvasP03o9AlNP8wFm7aDCCWyooSMU8gkQ5zm/IckU0ySqRJJrpiMitNclUe0wwndcOKx6ZaCbdNACAF1qGDaDmtnWnCDEG4gsHc8WI7HJC9vNzy/Xlm0TSJcRZScctcPcFwP5bGe8emtepzfzlvRqLthuT7f+9BK12s0XT8THqsa252JsmrYP9cXTBTGCcI4RZRmi4cRe0je+ouPBLGSfhAOwwClFPLyyJ5ROKt3KXtXcGhkSVnV/Bx1Aq2PTfeVkI9eFHEggYznYJY50dFIRHSsLtd31urhp48X3j4T1m0HY29zcpQsJbr2Y7ZQzuuSSYmYiFYPV78/Uu76HjKKeZtioSJCmocLKfWeJ0ImpX6kkOb+G78WHPqeT8qhahDICEEYwQtC7kWioSD09MxbpbYh/d0ytP4MRWuocm7Y9ZTYnv9JJCRbQSFQM7NovigvD3yaqqblj8NvkLCbgQ33WlAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="The string &#39;gesund&#39; is input in the subject field and several entries with this string from a controlled vocabulary are suggested."
+        title="The string &#39;gesund&#39; is input in the subject field and several entries with this string from a controlled vocabulary are suggested."
+        src="/static/6417112bfbd5cb40999e9ce1d97b7b82/f7a31/auto-suggestion-from-skos-vocab.png"
+        srcset="/static/6417112bfbd5cb40999e9ce1d97b7b82/c26ae/auto-suggestion-from-skos-vocab.png 158w,
+/static/6417112bfbd5cb40999e9ce1d97b7b82/6bdcf/auto-suggestion-from-skos-vocab.png 315w,
+/static/6417112bfbd5cb40999e9ce1d97b7b82/f7a31/auto-suggestion-from-skos-vocab.png 458w"
+        sizes="(max-width: 458px) 100vw, 458px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">The string &#39;gesund&#39; is input in the subject field and several entries with this string from a controlled vocabulary are suggested.</figcaption>
+  </figure></p>
+<p>Currently, only the fields “URL”, “Type” and “Title” are obligatory, all other fields are optional. When you think you have described the resource sufficiently, you can click on “Show Preview” in the extension, copy &#x26; paste the JSON-LD to the clipboard and include it in the HTML of any web page within a <code class="language-text">&lt;script type="application/ld+json"></code> tag.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 486px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/70707507ae9efdd0f829cba5b111f2fd/4ee7f/json-preview.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 125.9493670886076%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAACXBIWXMAAAsTAAALEwEAmpwYAAADjElEQVQ4y51V2XbjNgzN//9XX9qm2Sb2xI4d2bJ2i7I27tRtAWW3Zx7Kc3BESSRwiXsBXg1SwzgHYy+Yc9DWQhvL7/R8N2tf11le13Y9Tl2Pq1EZ/G70/YA0L7A/JEjSDHlZsWVFiSTLcUgzZHmOLMtQ1YIcat44TdOZ0aiFwOJpheubW6yfN1g+rfHwuMCPxU/cPTzi+vYeq/Uz0jRFeRQzwtlBuIjQBWAYJaTS0NZhlIrn4zhCSslPYwziwwFV3eBKagPnHKQyUMpDSgetPJybMHmLMDSAkYAZMY0toIfZvo19HM8OR22A4KCrFE2coHnZoEsSqEbA1wnMyx18V8MPJ/i2hO8F3KkEJYRtOnNoMVkFvb2FTVYwux9whyXsyw3s4Sf05h/Y7Bm+yeGqPWzxgjCe4ModXBnBEepzhB62FTjuUog4hZM9bLyE3t7AZhu4fAubrvhdb645CAUORr6T9+5QGoegBpjnv2EJWbxgow1mv2B0tojgmgKhF4zOd0f4tuKT/SKHHrouIbIaRmv4oeEgZLTRa4lASggek3dsb+MMIefQWxhCFt3B7h5g9w/8dCKFq2J4kTEhc952Mzpy/kmvHw6pUqYALSqIaIfTdo02jiGiCEMnEayaHXY1S4iMCAqqnxHiIssaenOLfruETCOoKke/voepErhjDL3+C3r1J2y6ZkI05TvfwBURgtXfHBqHySio5R+wuzu49Al2dw8b3cLlG9YhpYMYdnUys15EMCSzdM3HJ5zfHMpZCvESJnqAofyRqOMlbL7lOf2nfBL7dGT6TicL56TMlWKaI6p9gWJXQnUtow6y42Bz7k7MOjkngoLsEfQIr8ZfsEyao6PGC7jihXNkonu4Jodvilk+Inv9t4U7Hrhy6BvV3z4+fGXZnGqIfQKxi2FORw7ABBye5rIjlt8K99M4Z/m1H/oAlHmPLOmgdIAaOpixB7zF5F5b3Ieaz/rmVx3S0mmCMQpWWwythNIz+yRuPu6phD8V3HWmz0jPHeov0Jt6xH5zRNcbhLZkDXI9UyfaP8IkK/ixhadAFCRcrJTpldERXdVAJAU8sSs7bgTEJlUG9UJCy98JLeV2aC8IW49zz6PNg0AQh3kxsXqMec5oqARp3tVznfN79k3Y2swdxFm+M/7viD9kM+dwGCT6doBRDtY4aGlhtONa9dwH27mljS3r9vNN+XbdNv/dy/8CJkl96BetmE0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Preview of the structured JSON data in the SKoHub extension"
+        title="Preview of the structured JSON data in the SKoHub extension"
+        src="/static/70707507ae9efdd0f829cba5b111f2fd/4ee7f/json-preview.png"
+        srcset="/static/70707507ae9efdd0f829cba5b111f2fd/c26ae/json-preview.png 158w,
+/static/70707507ae9efdd0f829cba5b111f2fd/6bdcf/json-preview.png 315w,
+/static/70707507ae9efdd0f829cba5b111f2fd/4ee7f/json-preview.png 486w"
+        sizes="(max-width: 486px) 100vw, 486px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Preview of the structured JSON data in the SKoHub extension</figcaption>
+  </figure></p>
+<p>Using the <a href="http://blog.lobid.org/2019/05/17/skohub.html#subject-specific-subscription-to-web-resources">content subscription &#x26; publication features of SkoHub</a>, you can furthermore publish the resource via SkoHub PubSub (to be covered in detail in an upcoming post).</p>
+<h2>Configuring the web form with JSON Schema</h2>
+<p>As said above, the SkoHub Extension wraps the SkoHub Editor running at <a href="https://skohub.io/editor/">https://skohub.io/editor/</a>. SkoHub Editor is configured with a <a href="https://json-schema.org/understanding-json-schema/">JSON schema</a> document that is used both to generate appropriate form inputs and to validate the entered content. Thus, the JSON Schema is the central, most crucial part when working with SkoHub Editor. Currently, we are using as default schema a <a href="https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schema.json">draft schema for OER</a> we created using relevant properties and types from <a href="https://schema.org">schema.org</a>. With the JSON schema URL, we can now load the <a href="https://skohub.io/editor/?schema=https://dini-ag-kim.github.io/lrmi-profile/draft/schemas/schema.json">web form</a> you already know from the browser extension by providing the link to the schema. Of course, you can just write your own schema to build a web form for your use case.</p>
+<p>Let’s take a short look at the underlying schema, which we tried to keep as straightforward as possible. Generally, with JSON schema you can specify a number of optional or mandatory properties and what type of input each expects. The <code class="language-text">"title"</code> of each property will be used as the label for the field in the web form.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">{
+  "properties": {
+    "name": {
+      "title": "Title",
+      "type": "string"
+    }
+  }
+}</code></pre></div>
+<p>It is also possible to allow only values from a predefined list (an <code class="language-text">enum</code>), which the editor will render as a drop down:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">{
+  "type": {
+    "title": "Type",
+    "type": "string",
+    "enum": [
+      "AudioObject",
+      "Book",
+      "Course",
+      "CreativeWork",
+      "DataDownload",
+      "ImageObject",
+      "PresentationDigitalDocument",
+      "SoftwareApplication",
+      "VideoObject"
+    ]
+  }
+}</code></pre></div>
+<p>Such lists of allowed values can be considered controlled vocabularies, and ideally they should be shared across many data sources. This is where SkoHub Vocabs comes into play. Instead of embedding the list of allowed values into our schema, we can reference a SKOS vocabulary on the web:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">{
+  "about": {
+    "title": "Subject",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "inScheme": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "enum": [
+                "https://w3id.org/kim/hochschulfaechersystematik/scheme"
+              ]
+            }
+          }
+        }
+      },
+      "_widget": "SkohubLookup"
+    }
+  }
+}</code></pre></div>
+<p>Notice the custom key <code class="language-text">_widget</code> in the JSON schema. This will configure the editor to use the specified UI element for the given field. In our example, the <code class="language-text">SkohubLookup</code> widget is used, which works with all controlled vocabularies that are published with SkoHub Vocabs. All custom JSON schema extensions start with an underscore <code class="language-text">_</code> and are used to control the look and feel of the editor; see below for an example for how to hide a field on the form.</p>
+<p>Finally, to make our data JSON-LD, we also set a mandatory <code class="language-text">@context</code> property and a default object value for the <code class="language-text">@context</code>. This makes the editor add it to the document without any user interaction needed.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OER",
+  "description": "This is a generic JSON schema for describing an Open Educational Resource with schema.org",
+  "type": "object",
+  "default": {
+    "@context": {
+      "id": "@id",
+      "type": "@type",
+      "@vocab": "http://schema.org/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "prefLabel": "skos:prefLabel",
+      "inScheme": "skos:inScheme",
+      "Concept": "skos:Concept"
+    }
+  },
+  "properties": {
+    "@context": {
+      "type": "object",
+      "additionalProperties": true,
+      "_display": {
+        "className": "hidden"
+      }
+    }
+}</code></pre></div>
+<h2>Implementation</h2>
+<p>Of course you can also poke around the editor while running it locally:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">$ git clone https://github.com/hbz/skohub-editor.git
+$ cd skohub-editor
+$ npm install</code></pre></div>
+<p>As is the case with SkoHub Vocabs, the editor is implemented in <a href="https://reactjs.org/">React</a>. The form components are located in <code class="language-text">src/components/JSONSchemaForm</code>. In a nutshell, a <code class="language-text">Form</code> provides data to the various input components:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;Form
+  data={{title: 'A title'}}
+  onSubmit={console.log}
+>
+  &lt;Input property="title" />
+  &lt;Textarea property="description" />
+  &lt;button type="submit">Publish&lt;/button>
+&lt;/Form></code></pre></div>
+<p>Obviously it would be tedious to manually code all the inputs for a given schema. This is where the <code class="language-text">Builder</code> comes into play. It reads a schema and creates all necessary input components:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&lt;Form
+  data={{title: ''}}
+  onSubmit={console.log}
+>
+  &lt;Builder schema={{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "My JSON schema",
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "title": "Title"
+      },
+      "description": {
+        "type": "string",
+        "title": "Description",
+        "_widget": "Textarea"
+      }
+    }
+  }} />
+  &lt;button type="submit">Publish&lt;/button>
+&lt;/Form></code></pre></div>
+<p>The browser extension is essentially a simple wrapper for the editor running at <a href="https://skohub.io/editor/">https://skohub.io/editor/</a>, which the extension injects as an <code class="language-text">iframe</code> into the current page. Additionally, before the iframe is injected, some metadata is scraped from that page. This data is used to pre-populate the editor. This process obviously depends both on the data found in the web page and on the schema the editor is configured to use. YouTube for example uses <code class="language-text">meta name="description"</code> for data about YouTube itself rather than the actual video, which is described in <code class="language-text">meta property="og:description"</code>. Even if the correct metadata is extracted, there is no guarantee that the schema used to configure the editor even has a <code class="language-text">description</code> field. In the future, it would be nice to find a possibility to somehow map page metadata to properties in the schema itself.</p>
+<h2>Outlook</h2>
+<p>SkoHub Editor already works very well and can be extremely useful. However, some things are still work in progress and will need some future effort to be improved:</p>
+<ul>
+<li><strong>Using schema.org markup for pre-population</strong>: This might sound obvious but we have not implemented it yet, see <a href="https://github.com/hbz/skohub-extension/issues/17">#17</a>.</li>
+<li><strong>Further issues</strong>: See also the issues at <a href="https://github.com/hbz/skohub-editor/issues">https://github.com/hbz/skohub-editor/issues</a> for further ideas for improvement.</li>
+</ul>
+<p>Furthermore, some work will have to be put into the current default schema and the controlled vocabularies it uses:</p>
+<ul>
+<li><strong>Develop JSON Schema</strong>: The JSON Schema definitely is not finished yet. For example, it makes sense to include <code class="language-text">http://schema.org/keywords</code> in the future for adding arbitrary tags to describe a resource. We plan to develop the schema within the common <a href="https://oerworldmap.org/resource/urn:uuid:fd06253e-fe67-4910-b923-51db9d27e59f">OER metadata group</a> of DINI AG KIM &#x26; Jointly with a focus on describing OER in the German-speaking world.</li>
+<li><strong>Improve Vocabularies</strong>: For “Learning Resource Type” and “Intended Audience” we are using controlled vocabularies that are not nearly finished but in development at the <a href="https://www.dublincore.org/groups/lrmi-task-group/">LRMI Task Group</a> of the Dublin Core Metadata Initiative (DCMI). Trying out the browser extension, you will for instance see that the educational resources types are missing some options. However, we assume that the combination of SkoHub Editor &#x26; SkoHub Vocabs makes a pretty nice environment for the development of these vocabularies in an open and transparent process on GitHub or GitLab.</li>
+</ul>
+<h2>Get involved</h2>
+<p>Please try it out and let us know what doesn’t work or which feature you are missing and also what you like about SkoHub. We are happy about every bug report, suggestion and feature requests for the production version. Get in <a href="https://lobid.org/team-en/">contact</a> with us via a hypothes.is annotation, GitHub, Email, Mastodon or IRC.</p></section><hr/><footer><div class="bio"><div><p>A blog for SkoHub.<!-- --> <!-- -->This blog is maintained by <strong>the SkoHub Community</strong>.</p></div></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/2020-01-29-skohub-talk-at-swib19/">← <!-- -->SkoHub talk at SWIB19: KOS-based content syndication with ActivityPub</a></li><li><a rel="next" href="/2020-06-25-skohub-pubsub/">Presenting SkoHub PubSub<!-- --> →</a></li></ul></nav></main><footer><div class="wrapper-footer"><div class="footer-navigation"><ul><li><a href="/contact/">Contact</a></li><li><a href="https://skohub.io" target="_blank" rel="noreferrer">skohub.io</a></li><li><a href="/rss.xml">RSS-Feed</a></li><li><a href="https://openbiblio.social/@skohub">Mastodon <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="mastodon" class="svg-inline--fa fa-mastodon " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg></a></li><li><a href="https://metadaten.community/c/software-und-tools/metafacture/8">Discourse <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="discourse" class="svg-inline--fa fa-discourse " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M225.9 32C103.3 32 0 130.5 0 252.1 0 256 .1 480 .1 480l225.8-.2c122.7 0 222.1-102.3 222.1-223.9C448 134.3 348.6 32 225.9 32zM224 384c-19.4 0-37.9-4.3-54.4-12.1L88.5 392l22.9-75c-9.8-18.1-15.4-38.9-15.4-61 0-70.7 57.3-128 128-128s128 57.3 128 128-57.3 128-128 128z"></path></svg></a></li><li><a href="https://github.com/skohub-io">GitHub <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a></li></ul></div></div></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2020-03-31-skohub-editor/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-fe620b60292e32d725ed.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-46780dec3ea827d4d8e6.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-3f600f2fd850bd382202.js\"],\"component---src-pages-contact-js\":[\"/component---src-pages-contact-js-5c21a365d688463f3898.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-39a1a0f79cf5786e617b.js\"],\"component---src-pages-using-typescript-tsx\":[\"/component---src-pages-using-typescript-tsx-0e780893e2657d08bb50.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-6602a7d8cfc7be2778f4.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="a671f36031795c0731bf";</script><script src="/webpack-runtime-8c179305cae52ad85711.js" async></script><script src="/framework-f5cf36c7d70977c4e569.js" async></script><script src="/app-fe620b60292e32d725ed.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

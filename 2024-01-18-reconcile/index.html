@@ -1,0 +1,447 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 5.5.0"/><meta name="theme-color" content="#26c884"/><meta data-react-helmet="true" name="description" content="Reconciliation is the process of integrating data from sources which do not share common unique identifiers by identifying records which refer to the same…"/><meta data-react-helmet="true" property="og:title" content="Supporting the Reconciliation Service API for SKOS vocabularies"/><meta data-react-helmet="true" property="og:description" content="Reconciliation is the process of integrating data from sources which do not share common unique identifiers by identifying records which refer to the same…"/><meta data-react-helmet="true" property="og:type" content="website"/><style data-href="/styles.7d6cd8f07fdbd498b042.css" data-identity="gatsby-global-css">@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-8d7d79679b70dbe27172b6460e7a7910.woff2) format("woff2"),url(/static/montserrat-latin-100-ec38980a9e0119a379e2a9b3dbb1901a.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e279051046ba1286706adc886cf1c96b.woff2) format("woff2"),url(/static/montserrat-latin-100italic-3b325a3173c8207435cd1b76e19bf501.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-9d266fbbfa6cab7009bd56003b1eeb67.woff2) format("woff2"),url(/static/montserrat-latin-200-2d8ba08717110d27122e54c34b8a5798.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-6e5b3756583bb2263eb062eae992735e.woff2) format("woff2"),url(/static/montserrat-latin-200italic-a0d6f343e4b536c582926255367a57da.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-00b3e893aab5a8fd632d6342eb72551a.woff2) format("woff2"),url(/static/montserrat-latin-300-ea303695ceab35f17e7d062f30e0173b.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-56f34ea368f6aedf89583d444bbcb227.woff2) format("woff2"),url(/static/montserrat-latin-300italic-54b0bf2c8c4c12ffafd803be2466a790.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-b71748ae4f80ec8c014def4c5fa8688b.woff2) format("woff2"),url(/static/montserrat-latin-400-0659a9f4e90db5cf51b50d005bff1e41.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-6eed6b4cbb809c6efc7aa7ddad6dbe3e.woff2) format("woff2"),url(/static/montserrat-latin-400italic-7583622cfde30ae49086d18447ab28e7.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-091b209546e16313fd4f4fc36090c757.woff2) format("woff2"),url(/static/montserrat-latin-500-edd311588712a96bbf435fad264fff62.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-c90ced68b46050061d1a41842d6dfb43.woff2) format("woff2"),url(/static/montserrat-latin-500italic-5146cbfe02b1deea5dffea27a5f2f998.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-0480d2f8a71f38db8633b84d8722e0c2.woff2) format("woff2"),url(/static/montserrat-latin-600-b77863a375260a05dd13f86a1cee598f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-cf46ffb11f3a60d7df0567f8851a1d00.woff2) format("woff2"),url(/static/montserrat-latin-600italic-c4fcfeeb057724724097167e57bd7801.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-7dbcc8a5ea2289d83f657c25b4be6193.woff2) format("woff2"),url(/static/montserrat-latin-700-99271a835e1cae8c76ef8bba99a8cc4e.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-c41ad6bdb4bd504a843d546d0a47958d.woff2) format("woff2"),url(/static/montserrat-latin-700italic-6779372f04095051c62ed36bc1dcc142.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-db9a3e0ba7eaea32e5f55328ace6cf23.woff2) format("woff2"),url(/static/montserrat-latin-800-4e3c615967a2360f5db87d2f0fd2456f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-bf45bfa14805969eda318973947bc42b.woff2) format("woff2"),url(/static/montserrat-latin-800italic-fe82abb0bcede51bf724254878e0c374.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-e66c7edc609e24bacbb705175669d814.woff2) format("woff2"),url(/static/montserrat-latin-900-8211f418baeb8ec880b80ba3c682f957.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-4454c775e48152c1a72510ceed3603e2.woff2) format("woff2"),url(/static/montserrat-latin-900italic-efcaa0f6a82ee0640b83a0916e6e8d68.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-fc117160c69a8ea0851b26dd14748ee4.woff2) format("woff2"),url(/static/merriweather-latin-300-58b18067ebbd21fda77b67e73c241d3b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-fe29961474f8dbf77c0aa7b9a629e4bc.woff2) format("woff2"),url(/static/merriweather-latin-300italic-23c3f1f88683618a4fb8d265d33d383a.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-d9479e8023bef9cbd9bf8d6eabd6bf36.woff2) format("woff2"),url(/static/merriweather-latin-400-040426f99ff6e00b86506452e0d1f10b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-2de7bfeaf08fb03d4315d49947f062f7.woff2) format("woff2"),url(/static/merriweather-latin-400italic-79db67aca65f5285964ab332bd65f451.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-4b08e01d805fa35d7bf777f1b24314ae.woff2) format("woff2"),url(/static/merriweather-latin-700-22fb8afba4ab1f093b6ef9e28a9b6e92.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-cd92541b177652fffb6e3b952f1c33f1.woff2) format("woff2"),url(/static/merriweather-latin-700italic-f87f3d87cea0dd0979bfc8ac9ea90243.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-f813fc6a4bee46eda5224ac7ebf1b7be.woff2) format("woff2"),url(/static/merriweather-latin-900-5d4e42cb44410674acd99153d57df032.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-b7901d85486871c1779c0e93ddd85656.woff2) format("woff2"),url(/static/merriweather-latin-900italic-9647f9fdab98756989a8a5550eb205c3.woff) format("woff")}
+
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{-webkit-text-size-adjust:100%;line-height:1.15}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden]{display:none}:root{--maxWidth-none:"none";--maxWidth-xl:52rem;--maxWidth-wrapper:var(--maxWidth-xl);--spacing-px:"1px";--spacing-0:0;--spacing-1:0.25rem;--spacing-2:0.5rem;--spacing-3:0.75rem;--spacing-4:1rem;--spacing-5:1.25rem;--spacing-6:1.5rem;--spacing-8:2rem;--spacing-10:2.5rem;--spacing-12:3rem;--spacing-16:4rem;--spacing-20:5rem;--spacing-24:6rem;--spacing-32:8rem;--fontWeight-normal:300;--fontWeight-bold:700;--fontSize-root:16px;--lineHeight-none:1;--lineHeight-tight:1.1;--lineHeight-normal:1.5;--lineHeight-relaxed:1.625;--fontSize-1:1rem;--fontSize-2:1.2rem;--fontSize-3:1.44rem;--fontSize-4:1.728rem;--fontSize-5:2.074rem;--fontSize-6:2.488rem;--fontSize-7:2.986rem;--color-primary:#e6007d;--color-hover:#14968c;--color-text:#0f554b;--color-text-light:#14968c;--color-heading:#0f554b;--color-accent:#c8c8c8;--color-white:#fff}@font-face{font-family:Ubuntu;font-style:normal;font-weight:400;src:url(/static/ubuntu-v20-latin-regular-5fa0d860656d0e40c0861657b07f82e0.eot);src:local(""),url(/static/ubuntu-v20-latin-regular-5fa0d860656d0e40c0861657b07f82e0.eot?#iefix) format("embedded-opentype"),url(/static/ubuntu-v20-latin-regular-2f02effe392a63dc07a5cdf187b2ef09.woff2) format("woff2"),url(/static/ubuntu-v20-latin-regular-6a317272decf6d2470386df117732fa6.woff) format("woff"),url(/static/ubuntu-v20-latin-regular-254e551b53a2ccebe384cd3af3a50c22.ttf) format("truetype"),url(/static/ubuntu-v20-latin-regular-f00252d5cc9aed7459bd59a61c740eba.svg#Ubuntu) format("svg")}@font-face{font-family:Ubuntu;font-style:normal;font-weight:700;src:url(/static/ubuntu-v20-latin-700-e7cf86fbe61557f0dcd34f4489f86840.eot);src:local(""),url(/static/ubuntu-v20-latin-700-e7cf86fbe61557f0dcd34f4489f86840.eot?#iefix) format("embedded-opentype"),url(/static/ubuntu-v20-latin-700-7ceec6fd3e7d00630b2568986c915532.woff2) format("woff2"),url(/static/ubuntu-v20-latin-700-6788e6ed863a8e559ef28b3913554383.woff) format("woff"),url(/static/ubuntu-v20-latin-700-fc38f31d636ef7ea94b75741b6d493c8.ttf) format("truetype"),url(/static/ubuntu-v20-latin-700-b0c73ddaf0479ad915d9ad30e1f4a5a7.svg#Ubuntu) format("svg")}*,:after,:before{box-sizing:border-box}html{font-size:var(--fontSize-root);line-height:var(--lineHeight-normal)}body,html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body{color:var(--color-text);counter-reset:figcaption;font-family:Ubuntu,sans-serif;font-size:var(--fontSize-1)}hr{background:var(--color-accent);border:0;height:1px}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);letter-spacing:-.025em;line-height:var(--lineHeight-tight);margin-bottom:var(--spacing-6);margin-top:var(--spacing-12)}h2,h3,h4,h5,h6{color:var(--color-heading)}h1,h2,h3,h4,h5,h6{font-weight:var(--fontWeight-bold)}h1{font-size:var(--fontSize-6)}h2{font-size:var(--fontSize-5)}h3{font-size:var(--fontSize-4)}h4{font-size:var(--fontSize-3)}h5{font-size:var(--fontSize-2)}h6{font-size:var(--fontSize-1)}h1>a,h2>a,h3>a,h4>a,h5>a,h6>a{color:inherit;text-decoration:none}figcaption{text-align:center}figcaption:before{content:"Figure " counter(figcaption) ": ";counter-increment:figcaption}p{--baseline-multiplier:0.179;--x-height-multiplier:0.35;line-height:var(--lineHeight-relaxed);margin:var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0)}ol,p,ul{padding:var(--spacing-0)}ol,ul{list-style-image:none;margin-bottom:var(--spacing-8);margin-left:var(--spacing-4);margin-right:var(--spacing-0)}ol li,ul li{padding-left:var(--spacing-0)}li>p,ol li,ul li{margin-bottom:calc(var(--spacing-8)/2)}li :last-child{margin-bottom:var(--spacing-0)}li>ul{margin-left:var(--spacing-8);margin-top:calc(var(--spacing-8)/2)}blockquote{border-left:var(--spacing-1) solid var(--color-primary);color:var(--color-text-light);font-size:var(--fontSize-2);font-style:italic;margin-bottom:var(--spacing-8);margin-left:var(--spacing-4);margin-right:var(--spacing-8);padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6)}blockquote>:last-child{margin-bottom:var(--spacing-0)}blockquote>ol,blockquote>ul{list-style-position:inside}table{border-collapse:collapse;border-spacing:.25rem;margin-bottom:var(--spacing-8);width:100%}table thead tr th{border-bottom:1px solid var(--color-accent)}a{color:var(--color-primary)}a:focus,a:hover{color:var(--color-hover);text-decoration:underline}.skohub-logo{display:inline-block;margin:0 0 var(--spacing-3) 0;width:100%}.skohub-logo a{color:var(--color-text);text-decoration:none}.skohub-img{height:50px;width:50px}.skohub-img,.skohub-title{display:inline-block;vertical-align:middle}.skohub-title{font-size:var(--fontSize-6);font-weight:var(--fontWeight-bold);padding:0 0 0 var(--spacing-3)}.skohub-nav{list-style:none;margin:var(--spacing-0);padding:var(--spacing-3) 0 0 0}.skohub-nav li{display:inline-block;margin:0 var(--spacing-2) 0 0}.skohub-nav li a{border:1px solid var(--color-text);border-radius:30px;color:var(--color-text);display:block;font-weight:var(--fontWeight-bold);padding:var(--spacing-2) var(--spacing-4);text-decoration:none}.skohub-nav li a:hover{border:1px solid var(--color-text-light);color:var(--color-text-light)}.global-wrapper{margin:var(--spacing-0) auto;max-width:var(--maxWidth-wrapper);padding:var(--spacing-10) var(--spacing-5) var(--spacing-0) var(--spacing-5)}.global-wrapper[data-is-root-path=true] .bio{margin-bottom:var(--spacing-12)}.global-header{margin-bottom:var(--spacing-3)}.main-heading{font-size:var(--fontSize-7);margin:0}.blog-posts{list-style:none;margin:var(--spacing-0) var(--spacing-0) var(--spacing-32) var(--spacing-0)}.is-blog-post{background:linear-gradient(180deg,#ebebeb,#fff 70%);border-radius:30px;padding:var(--spacing-8)}.post-list-item{margin-bottom:var(--spacing-8)}.post-list-item p{margin-bottom:var(--spacing-0)}.post-list-item h2{color:var(--color-primary);font-size:var(--fontSize-4);margin-bottom:var(--spacing-2);margin-top:var(--spacing-0)}.post-list-item header{margin-bottom:var(--spacing-4)}.header-link{font-family:var(--font-heading);font-size:var(--fontSize-2);font-weight:var(--fontWeight-bold);text-decoration:none}.bio{display:flex;margin-bottom:var(--spacing-8)}.bio p,.bio-avatar{margin-bottom:var(--spacing-0)}.bio-avatar{border-radius:100%;margin-right:var(--spacing-4);min-width:50px}.blog-post{margin:var(--spacing-12) var(--spacing-0) var(--spacing-0) var(--spacing-0)}.blog-post,.main-content{background:linear-gradient(180deg,#ebebeb,#fff 70%);border-radius:30px;padding:var(--spacing-8)}.main-content{margin:var(--spacing-12) var(--spacing-0) var(--spacing-32) var(--spacing-0)}.blog-post header h1,.main-content h1{margin:var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0)}.blog-post header p{font-family:var(--font-heading);font-size:var(--fontSize-2)}.blog-post-nav ul{margin:var(--spacing-0)}.gatsby-highlight{margin-bottom:var(--spacing-8)}.blog-post-nav{margin:var(--spacing-0) var(--spacing-0) var(--spacing-32) var(--spacing-0)}.blog-post-nav a{border:1px solid var(--color-primary);border-radius:30px;color:var(--color-primary);display:block;font-weight:var(--fontWeight-bold);padding:var(--spacing-2) var(--spacing-4);text-decoration:none}.blog-post-nav a:hover{border:1px solid var(--color-text-light);color:var(--color-text-light)}.wrapper-footer{bottom:0;left:50%;margin:var(--spacing-0) auto;max-width:var(--maxWidth-wrapper);padding:var(--spacing-10) var(--spacing-5) var(--spacing-0) var(--spacing-5);position:fixed;transform:translate(-50%);width:100%}.footer-navigation{background:var(--color-text-light);border-top-left-radius:30px;border-top-right-radius:30px}.footer-navigation ul{list-style:none;margin:var(--spacing-0);padding:var(--spacing-8) var(--spacing-0);text-align:center}.footer-navigation li{display:inline-block;margin:var(--spacing-2)}.footer-navigation li a{border-bottom:1px solid transparent;color:var(--color-white);text-decoration:none}.footer-navigation li a:hover{border-bottom:1px solid var(--color-white)}.svg-inline--fa{display:var(--fa-display,inline-block);height:1em;overflow:visible;vertical-align:-.125em}@media (max-width:42rem){blockquote{margin-left:var(--spacing-0);padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4)}.skohub-title{font-size:var(--fontSize-5)}.footer-navigation ul{padding:var(--spacing-2) var(--spacing-0)}ol,ul{list-style-position:inside}}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><link rel="canonical" href="https://blog.skohub.io/2024-01-18-reconcile/" data-baseprotocol="https:" data-basehost="blog.skohub.io"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="alternate" type="application/rss+xml" title="SkoHub Blog&#x27;s RSS Feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=3b68e7175ff10cac1dc50da0827ce2e1" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=3b68e7175ff10cac1dc50da0827ce2e1"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=3b68e7175ff10cac1dc50da0827ce2e1"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=3b68e7175ff10cac1dc50da0827ce2e1"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=3b68e7175ff10cac1dc50da0827ce2e1"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=3b68e7175ff10cac1dc50da0827ce2e1"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=3b68e7175ff10cac1dc50da0827ce2e1"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=3b68e7175ff10cac1dc50da0827ce2e1"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=3b68e7175ff10cac1dc50da0827ce2e1"/><title data-react-helmet="true">Supporting the Reconciliation Service API for SKOS vocabularies | Skohub Blog</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><div><div class="skohub-logo"><a href="/"><img class="skohub-img" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI3LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyMjYuOCAyMjYuOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjI2LjggMjI2Ljg7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMTQ5NjhDO30KPC9zdHlsZT4KPGc+Cgk8Zz4KCQk8Zz4KCQkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTE4OS43LDEyMy41TDU1LjksNDQuOUM0Mi45LDM3LjIsMjMuMiwyMywxOS41LDBsLTguOSwxNS43Yy0yOC4xLDQ5LjQsNi44LDc2LDI2LjYsODcuNmwxMzMuOCw3OC42CgkJCQljMTMsNy42LDMyLjcsMjEuOCwzNi41LDQ0LjlsOC45LTE1LjdDMjQ0LjQsMTYxLjYsMjA5LjQsMTM1LDE4OS43LDEyMy41eiIvPgoJCTwvZz4KCQk8Zz4KCQkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTAsMTM4Ljl2MzEuMmMwLDMxLjIsMjUuNSw1Ni43LDU2LjcsNTYuN2g3MS45TDMyLDE3MEMyMS44LDE2NCw3LjUsMTU0LDAsMTM4Ljl6Ii8+CgkJPC9nPgoJCTxnPgoJCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTcwLjEsMEg5OC4ybDk2LjYsNTYuN2MxMC4yLDYsMjQuNSwxNiwzMiwzMS4yVjU2LjdDMjI2LjgsMjUuNSwyMDEuMywwLDE3MC4xLDB6Ii8+CgkJPC9nPgoJPC9nPgo8L2c+Cjwvc3ZnPgo=" alt="SkoHub"/><span class="skohub-title">Skohub Blog</span></a></div><ul class="skohub-nav"><li><a class="header-link" href="/">Blog</a></li><li><a class="header-link" href="/about/">About</a></li><li><a href="https://skohub.io" class="header-link">Website</a></li></ul></div></header><main><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">Supporting the Reconciliation Service API for SKOS vocabularies</h1><p>January 22, 2024<span> | <span>Steffen<!-- --> <!-- -->Rörtgen</span></span></p></header><section itemProp="articleBody"><p>Reconciliation is the process of integrating data from sources which do not share common unique identifiers by identifying records which refer to the same entities.
+This happens mostly by comparing the attributes of the entities.
+For instance, two entries in a catalogue about persons that share the same date of birth, place of birth, name and death date, will probably be about the same person.
+Linking these two entries by adding the identifier from another data source is the process of reconciliation. This allows for extension of your data by taking over information from a linked record.</p>
+<p>To facilitate this process multiple tools exist with <a href="https://openrefine.org/">OpenRefine</a> being the most prominent tool.
+To align and standardize the way of providing data for these tools the <a href="https://reconciliation-api.github.io/specs/draft/">Reconciliation Service API</a> is drafted by the <a href="https://www.w3.org/community/reconciliation/">Entity Reconciliation Community Group</a> within the World Wide Web Consortium (W3C).
+The specification defines endpoints that data services can expose so that applications like OpenRefine can handle that data.
+A number of other services have already implemented the specification and can thus be used as clients for reconciliation tasks, e.g. <a href="https://teipublisher.com/">TEI Publisher</a>, <a href="https://coli-conc.gbv.de/cocoda/">Cocoda</a>, or the <a href="https://developers.exlibrisgroup.com/appcenter/alma-refine/">Alma Refine plugin</a> for the commercial Library Management System Alma.</p>
+<h2>Reconciliation and SKOS</h2>
+<p><a href="https://www.w3.org/TR/skos-reference/">Simple Knowledge Organization System (SKOS)</a> is an established standard for modeling controlled vocabularies as Linked Data. Thus, SKOS vocabularies are often targets of reconciliation efforts as you can improve your local data by enriching strings with identifiers of a controlled vocabulary. So SKOS and the Reconciliation Service API often go hand in hand. However, there has not existed an easy way to set up a reconcilation endpoint for an existing SKOS vocabulary. We decided to change that by developing the new SkoHub component <a href="https://github.com/skohub-io/skohub-reconcile">SkoHub-Reconcile</a>.</p>
+<p>Andreas Wagner had already built a reconciliation prototype for SKOS vocabularies (see also our <a href="https://blog.skohub.io/2022-12-19-workshop-summary/">Workshop Blog Post</a>).
+We picked this prototype up, refactored it and moved it into a container based infrastructure.
+We also added support for <a href="https://www.w3.org/community/reports/reconciliation/CG-FINAL-specs-0.2-20230410/">v0.2 of the reconciliation spec</a>.</p>
+<h2>SkoHub Reconcile Publish</h2>
+<p>To make it easy to upload vocabularies to the reconciliation service a front-end was developed which you can try out at <a href="https://reconcile-publish.skohub.io/">https://reconcile-publish.skohub.io/</a>.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/8169c2cfbbb31533862167855b403d88/84cc5/reconcile-publish.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 101.26582278481011%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAACrUlEQVQ4y4WSSU/bUBCA+YntDdT+g0ot4sytUir1XnGremkFBAIClJUg9hIEgRjKUqLYxMtbbSf2W1yI7cpOIRCo+PQkSzPzvRmPPRI/IYqiOI6pEFeufeHQJBI/z8jTUJjKDQzfreZ/nJ3cR16Qo5QwDOM4VrtuXm2u61oqh2EUhWn2hc79Ctvr1pu/IcH3kf927if9PwGRgkrRCSQVHPge8L1OELiBdKSkQrhB8Kyc6JizGjA2jes6suoInDm0jqwDaNWAuWvqB9ACzH+4v0dj96IQcoYEv3ToMYbnNq0BowaMc4cCxqjgt+k6hjuHd/Rv7QSy7XcB8yHztY7rSDFUNpCllJRSjLEFLNBsI0VVr1r07NrSLixTh6ZptXXDMAzTNA2DAEAo4Zz/k33fxxgTQhBClFKH2BBhBDHECBICCUEYU9u2XZc6NiEEY9Ttdgdykiak67qcsZ6UN4zf+KzHRchFj/FQiDgI4iDoCUEpReiB7HkewRhgXFEa+frht8P9qdr2l73tTxvVzEY1s7ma2ap+3lnPbFWnajsWQgTjYdnCaP5g//vP3czW2uRaabJaGi8ufygujeeXJhYXJ4or70srHzdWTQQfyenYiBIaMH4jZSjlLWO3PosYjziPuiw2OzEP4pvbUAb20NiDheEEiJObMKWIkORQgmwK0zhMy/Dw2CmVSiWbzeZyuUKhUC6XisViqVwulYqFfD6Xy83NzRUKBYQQIeRR5/5X1DRNTWk9IQmqqqapZspAFkLout5O0VOSh2ncHVM3jPtUH8bYoDNEiDnuvHL8emH67fL86FJ2dHF2LDczOj/zJjc7tjA7tpR9tTD99bDGXRcg5Hne4J0BABhj1TQaakvR1KNW80g5V2qnysGvxt6pcnKptLWG2moaevJHANAf+y+Gl0ME6q/9XgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="The reconcile-publish upload UI"
+        title="The reconcile-publish upload UI"
+        src="/static/8169c2cfbbb31533862167855b403d88/f058b/reconcile-publish.png"
+        srcset="/static/8169c2cfbbb31533862167855b403d88/c26ae/reconcile-publish.png 158w,
+/static/8169c2cfbbb31533862167855b403d88/6bdcf/reconcile-publish.png 315w,
+/static/8169c2cfbbb31533862167855b403d88/f058b/reconcile-publish.png 630w,
+/static/8169c2cfbbb31533862167855b403d88/84cc5/reconcile-publish.png 898w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">The reconcile-publish upload UI</figcaption>
+  </figure></p>
+<p>Every vocabulary that passes the SkoHub SHACL Shape (see our <a href="https://blog.skohub.io/2023-11-22-shacl-shape/">blog post</a>) should work for uploading to the reconcile service.
+The only additional requirement is to provide a <code class="language-text">vann:preferredNamespaceUri</code>.
+To be able to upload your vocabulary, you need first to sign in using an ORCID or Wikimedia account. This ensures that all your uploaded vocabs are associated with your account and nobody else is able to overwrite the data.
+As you can see in the screenshot you also have to provide a language.<sup id="fnref-1"><a href="#fn-1" class="footnote-ref">1</a></sup></p>
+<p>Let’s see how we can set up and use a reconciliation endpoint for a vocabulary.</p>
+<h2>Uploading a vocabulary</h2>
+<p>First, we upload the vocabulary.
+We will use a classification of <a href="https://w3id.org/kim/hochschulfaechersystematik/scheme">subject groups</a>.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/957aea20eb3c8fad60a006c5a7ae5fb3/fd28b/upload.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.26582278481012%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABtElEQVQoz2WP724SQRTF+1Ka+LG0voEx0ahP4hPoI9gmrophWxC00pr4SU2Qql0WKM2y/2nZnbnzhzsLu9sGvuhSRVtPTm4mZ+aXe2ZtPp8joromRCkl5YxHoCL+33WhxWKxNp1OAYD9I0LIaDQKgsDxPXdgnw3c0zCEOGacr94AQJqmBcwY45zHcTxL0yzP0ywrnOdZnmcXeXrxJ1mGqNQlfwVGKRPEKeJsMpGUSkoRoHBxYBlirtS5UkrKywq/YQowRSx/az852H/88cPddzsP9qp3Gnqp8nyjom3oWmn3RUnXNivarfLW1vd2hoqsagPARIheGLQs67M9bJ4cN497b/vmrmlUu0bNOKp/OawfGY2Tfq3f7YQBCnn9zxPGkHPFeEIpEqooJBQSgGRMUjeajWkqRMYFcn6lNgBIIZzTkeHYput0HLvnez3fMz2367kdzzFD33Adw7ENx/bHZ1KIv5spY+cqedr6dKO8va5rt6uvHh00Hu7X77+vFbP55t5edXPn5bqu3Xy9/ezHYa4Suto8jiJKyCDwW0OrbQ+Xtr7a1mouXeStoWWFISUkiqJf8E+IQQFG91TTEwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="The filled in upload form with a login via Wikimedia, &quot;de&quot; as language  and a link to hochschulfaechersystematik.ttl on GitHub as file to be uploaded"
+        title="The filled in upload form with a login via Wikimedia, &quot;de&quot; as language  and a link to hochschulfaechersystematik.ttl on GitHub as file to be uploaded"
+        src="/static/957aea20eb3c8fad60a006c5a7ae5fb3/f058b/upload.png"
+        srcset="/static/957aea20eb3c8fad60a006c5a7ae5fb3/c26ae/upload.png 158w,
+/static/957aea20eb3c8fad60a006c5a7ae5fb3/6bdcf/upload.png 315w,
+/static/957aea20eb3c8fad60a006c5a7ae5fb3/f058b/upload.png 630w,
+/static/957aea20eb3c8fad60a006c5a7ae5fb3/fd28b/upload.png 811w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">The filled in upload form with a login via Wikimedia, &quot;de&quot; as language  and a link to hochschulfaechersystematik.ttl on GitHub as file to be uploaded</figcaption>
+  </figure></p>
+<p>After a successful upload of the <a href="https://raw.githubusercontent.com/dini-ag-kim/hochschulfaechersystematik/master/hochschulfaechersystematik.ttl">turtle file</a>, we are presented with a URI that leads to the <a href="https://reconciliation-api.github.io/specs/draft/#service-manifest">“Service Manifest”</a> of our reconciliation service.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/83e55a74867714b86bd1a37ce75bae61/898f6/upload-success.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 32.278481012658226%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAIAAABM9SnKAAAACXBIWXMAAAsTAAALEwEAmpwYAAABBklEQVQY01WNzU7CQBRGeWTiE7hw788DmJgYHwHdAbGYGAKo1Cgyd6Yy5d6ZO1O4rQlGV6alCzk5y/Pl65Qi3jv+hw+BvPvZ7Y6vL09urn6/d3QY1I33VVV1RIQXq/D6WZtmnGbFTBdTiGOAUQr38zgzYabDBMJL1mbzjD9sWZbNmFwgH9Az+o3nxVip5K2aqmqqv56MTBQ9vrvU7Jtaqst6vBVhDiG2cuS42TwY1e3fdvu9br93NLibWCOy5dDQZJ5ZmueSyRDmRISISBSde9ZwmgzOk+FZMrwYDVOjmVye54i4Xq8R0fn981ZALUG1AMBSqUzrwtrC2mhtXNlM66U6AABE5A/8oDq+65kOeQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="The URL of the Service Manifest being returned by the upload UI"
+        title="The URL of the Service Manifest being returned by the upload UI"
+        src="/static/83e55a74867714b86bd1a37ce75bae61/f058b/upload-success.png"
+        srcset="/static/83e55a74867714b86bd1a37ce75bae61/c26ae/upload-success.png 158w,
+/static/83e55a74867714b86bd1a37ce75bae61/6bdcf/upload-success.png 315w,
+/static/83e55a74867714b86bd1a37ce75bae61/f058b/upload-success.png 630w,
+/static/83e55a74867714b86bd1a37ce75bae61/898f6/upload-success.png 798w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">The URL of the Service Manifest being returned by the upload UI</figcaption>
+  </figure></p>
+<p>If we follow the URL <a href="https://reconcile.skohub.io/reconcile?language=de&#x26;account=171687&#x26;dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme">https://reconcile.skohub.io/reconcile?language=de&#x26;account=171687&#x26;dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme</a> we see some data that services will use for reconciliation against our vocabulary:</p>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+   <span class="token property">"versions"</span><span class="token operator">:</span><span class="token punctuation">[</span>
+      <span class="token string">"0.2"</span><span class="token punctuation">,</span>
+      <span class="token string">"0.3.0-alpha"</span>
+   <span class="token punctuation">]</span><span class="token punctuation">,</span>
+   <span class="token property">"name"</span><span class="token operator">:</span><span class="token string">"SkoHub reconciliation service for account '171687', dataset 'https://w3id.org/kim/hochschulfaechersystematik/scheme'"</span><span class="token punctuation">,</span>
+   <span class="token property">"identifierSpace"</span><span class="token operator">:</span><span class="token string">"https://w3id.org/kim/hochschulfaechersystematik/"</span><span class="token punctuation">,</span>
+   <span class="token property">"schemaSpace"</span><span class="token operator">:</span><span class="token string">"http://www.w3.org/2004/02/skos/core#"</span><span class="token punctuation">,</span>
+   <span class="token property">"defaultTypes"</span><span class="token operator">:</span><span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+         <span class="token property">"id"</span><span class="token operator">:</span><span class="token string">"ConceptScheme"</span><span class="token punctuation">,</span>
+         <span class="token property">"name"</span><span class="token operator">:</span><span class="token string">"ConceptScheme"</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+         <span class="token property">"id"</span><span class="token operator">:</span><span class="token string">"Concept"</span><span class="token punctuation">,</span>
+         <span class="token property">"name"</span><span class="token operator">:</span><span class="token string">"Concept"</span>
+      <span class="token punctuation">}</span>
+   <span class="token punctuation">]</span><span class="token punctuation">,</span>
+   <span class="token property">"view"</span><span class="token operator">:</span><span class="token punctuation">{</span>
+      <span class="token property">"url"</span><span class="token operator">:</span><span class="token string">"{{id}}"</span>
+   <span class="token punctuation">}</span><span class="token punctuation">,</span>
+   <span class="token property">"preview"</span><span class="token operator">:</span><span class="token punctuation">{</span>
+      <span class="token property">"url"</span><span class="token operator">:</span><span class="token string">"https://reconcile.skohub.io/preview?language=de&amp;account=171687&amp;dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&amp;id={{id}}"</span><span class="token punctuation">,</span>
+      <span class="token property">"width"</span><span class="token operator">:</span><span class="token number">100</span><span class="token punctuation">,</span>
+      <span class="token property">"height"</span><span class="token operator">:</span><span class="token number">320</span>
+   <span class="token punctuation">}</span><span class="token punctuation">,</span>
+   <span class="token property">"suggest"</span><span class="token operator">:</span><span class="token punctuation">{</span>
+      <span class="token property">"entity"</span><span class="token operator">:</span><span class="token punctuation">{</span>
+         <span class="token property">"service_url"</span><span class="token operator">:</span><span class="token string">"https://reconcile.skohub.io"</span><span class="token punctuation">,</span>
+         <span class="token property">"service_path"</span><span class="token operator">:</span><span class="token string">"/suggest?language=de&amp;account=171687&amp;dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&amp;service=entity"</span><span class="token punctuation">,</span>
+         <span class="token property">"flyout_service_path"</span><span class="token operator">:</span><span class="token string">"/suggest/flyout?language=de&amp;account=171687&amp;dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&amp;id=${id}"</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">"property"</span><span class="token operator">:</span><span class="token punctuation">{</span>
+         <span class="token property">"service_url"</span><span class="token operator">:</span><span class="token string">"https://reconcile.skohub.io"</span><span class="token punctuation">,</span>
+         <span class="token property">"service_path"</span><span class="token operator">:</span><span class="token string">"/suggest?language=de&amp;account=171687&amp;dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&amp;service=property"</span><span class="token punctuation">,</span>
+         <span class="token property">"flyout_service_path"</span><span class="token operator">:</span><span class="token string">"/suggest/flyout?language=de&amp;account=171687&amp;dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&amp;id=${id}"</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">"type"</span><span class="token operator">:</span><span class="token punctuation">{</span>
+         <span class="token property">"service_url"</span><span class="token operator">:</span><span class="token string">"https://reconcile.skohub.io"</span><span class="token punctuation">,</span>
+         <span class="token property">"service_path"</span><span class="token operator">:</span><span class="token string">"/suggest?language=de&amp;account=171687&amp;dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&amp;service=property"</span><span class="token punctuation">,</span>
+         <span class="token property">"flyout_service_path"</span><span class="token operator">:</span><span class="token string">"/suggest/flyout&amp;language=de&amp;account=171687&amp;dataset=https://w3id.org/kim/hochschulfaechersystematik/scheme&amp;id=${id}"</span>
+      <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h2>Example: Usage in OpenRefine</h2>
+<p>Now that the reconciliation service is set up with our data, let’s see how we can use it in OpenRefine.</p>
+<p>For demo purposes, we load a small vocabulary of a few discipline names into OpenRefine:</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 392px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/8ee81921b4fd54654268bbb82e704459/0acb4/or1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 58.22784810126582%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAA7EAAAOxAGVKw4bAAACTElEQVQoz1WT607bQBCF/f4PUPVfH4ECUkUSShFBESJEkNIICi2kufuS3bW9ttfXr1qnQcXS0cx4js9452gdEZVsghwRVkQJBDLH22b4wuCLjE1gcIOCbVjiBjkqrohTWm5idlBxTSAL0qzC6XYVk4eKm9sJHz5+4uFpjogq3CDbCcucyWNGp6N5nQk+H3U4OOpw/OWMw+Nemw+uxlwNJ5Q1OC9Tw8qDm9sHDg5PmM58RFj8+0srapgtc16mJX8WIV+/DTjpXtDp9dtoMRxNuP3+TFGBM3dzpquMVdAQRDBdF7wuM2abnLlrc8PCq1hva9ZbkAn4IbgSPLXDetuw8GripMRZiZy1MEgpWW8T/LhGRhmLxYLnX7+JY839/Q/u7sZcXPTp9y9ZrdaoMEIIiZQKqcI25nmBs1EFrjKESuJLzUbmqChhvVry+PhIGCqenn4yHo8ZDodcX1+zXC6J47jthWHYQikrmOPEiUGnBmMysixDaUOcZOTGUBRF+64sS6qqoq5r7GNrC2PMGyzPchxPwzaxtAaZgq+hbMB1N0wmk1ZgNBrR7XY5PT3l7OyM8/Nz+v0+8/m87TdN8xYdmTbEprEVZdWg0pqiasjz3VRLSpKk3bGFEKKNQRC0/b3QHk6oMyy0jol0SpiURDpDCoHneaRpiu/7b7uytT2i3ZfNtdbtQBvtipyFrFmJojVlY29G2KBiw3T6ymAwaImXl5d0Oh16vV7rvjXEmrAf8s4UXyYESr81PKGRKkKp3RH//2AvEkXRO7F9bQX/AnMRgvhFKtbFAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="An OpenRefine tab with the values &quot;mathe&quot;, &quot;bibliothek&quot;, &quot;forst&quot;"
+        title="An OpenRefine tab with the values &quot;mathe&quot;, &quot;bibliothek&quot;, &quot;forst&quot;"
+        src="/static/8ee81921b4fd54654268bbb82e704459/0acb4/or1.png"
+        srcset="/static/8ee81921b4fd54654268bbb82e704459/c26ae/or1.png 158w,
+/static/8ee81921b4fd54654268bbb82e704459/6bdcf/or1.png 315w,
+/static/8ee81921b4fd54654268bbb82e704459/0acb4/or1.png 392w"
+        sizes="(max-width: 392px) 100vw, 392px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">An OpenRefine tab with the values &quot;mathe&quot;, &quot;bibliothek&quot;, &quot;forst&quot;</figcaption>
+  </figure></p>
+<p>By clicking on the dropdown button of the column we want to reconcile, we choose “Reconcile” -> “Start reconciling…“.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/1ba989cdd764d0e20d0886cbee808596/47ff6/or2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 115.82278481012658%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAYAAAALHW+jAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACeklEQVQ4y51Ua2vaUBjOH1u/lOo+rD9yMAb70FnYhbEORm1HwVq6KhulGi/RRHMziSYxiYnPeI5NsINplwNP3nDec57z3qX+MMZtS8b5ZQPXN79h2nNwrddrgfz/uUvSDQu9Xg+O6yFJVkiSRBDouo4oiv6f0PNcjEYj2LaNLMsKxWKxKEfoui5UVcNgMIDv+4Wrq9WqHCEtsyxLIAwDcZmWcr8UoWmaGI0UDAZ9OK5TKLhfmlDTNEynUxHL5XIpFLS4FOFsNsNwOIQs9wRxvgzDKEfIRDiOA9Oy4HmeSEaapmCySrusqmqxkV9mYqIoflLku5Cfk1zXgaapyNI0pxTf2cxG/GjhZm/9RP/3ykkl23ExVicIowRxkmL5KNlBQbhJULYG0myNZJVilWaI4mQLseguhomQbu/HqN908b1xj6u2gq4e42GyxM+OjruujvPre1y1+mj8UnD7oKElG9ADYOpDSG0BJNlWDA3bgzKxMJpYmJguDMcXmFoeNNNDV9Ex1l38aNzh9dsTvHl3ivcfz1D79E3g5MMZPn/5isuLC9TrdUi7MhYGvih4fzHHaa2Gg4MXOD5+hUrlCFWiWhGycnSEw8NDvKxWIe3KHEuKNcqi57BgbRKsDMIwTMi9HhRFEY3APelf2aIMgkAQ8PD2JNpe7CwmpYjhPkK2I18ej8fo9/vodDqibjlDaXXuST5UdhLmLpOAbtF1So46WZYRhuEm1o9SFPY+C9nrBCc425H/DAMf4YNsVZ7bS5hPbVrEywSHB93eHiIs5r0W5qQcss1mE+12W7hLC5kgWknLeI6Ez7KQki/P53PhGrMZx3EB6khE3fZU+gNiEuG48BEAOwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="OpenRefine dropdown menu to start a reconciliation process"
+        title="OpenRefine dropdown menu to start a reconciliation process"
+        src="/static/1ba989cdd764d0e20d0886cbee808596/f058b/or2.png"
+        srcset="/static/1ba989cdd764d0e20d0886cbee808596/c26ae/or2.png 158w,
+/static/1ba989cdd764d0e20d0886cbee808596/6bdcf/or2.png 315w,
+/static/1ba989cdd764d0e20d0886cbee808596/f058b/or2.png 630w,
+/static/1ba989cdd764d0e20d0886cbee808596/47ff6/or2.png 852w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">OpenRefine dropdown menu to start a reconciliation process</figcaption>
+  </figure></p>
+<p>After clicking “Add standard service”, we can enter the urlprovided by the upload service:</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 509px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/0e5ae71d9832025258c11dc9d5827e27/71554/or03.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 31.645569620253163%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAIAAABM9SnKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5klEQVQY04WKbWuDMBSF8///0lh9abu3ln4Y1Bhnk/RKjXTV6bzGYTUZTdkYY7CHh8O9h0PCdbKK4Gm7X25eVltYR9njs4BqKNCq9rcF2p894ZCX1dvxVJZVfSqr42s5DIO11lg7Tsa4YzIXjbXncTqP07UfJ0O42Mc0iilNkiSOY0ppmqYZQAYghJBSCoeUEgCUUlJK7kBEAtlBa91+g/juaJrmmnVdN462bbXW3de473uy4/Kjv/wd/kHnRESNyPmOMcY5V3nOGCuKgtzc+ou7h/ny/l89P5x5geeHfjCfeUEQLj4B/5tC3RFDisYAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Adding the Service Manifest URL in OpenRefine"
+        title="Adding the Service Manifest URL in OpenRefine"
+        src="/static/0e5ae71d9832025258c11dc9d5827e27/71554/or03.png"
+        srcset="/static/0e5ae71d9832025258c11dc9d5827e27/c26ae/or03.png 158w,
+/static/0e5ae71d9832025258c11dc9d5827e27/6bdcf/or03.png 315w,
+/static/0e5ae71d9832025258c11dc9d5827e27/71554/or03.png 509w"
+        sizes="(max-width: 509px) 100vw, 509px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Adding the Service Manifest URL in OpenRefine</figcaption>
+  </figure></p>
+<p>Then we just have to start the reconciliation by clicking “Start reconciling…” and our reconciliation service will be queried with the terms in our OpenRefine project.
+We are then presented with the results:</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d4191f055b104445a4c283e09a9ebec8/ad997/or4.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 131.0126582278481%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADMklEQVRIx42ViY6jOBCG8/7PttLu9jEzaY6E2+ATGwKY419h2Ew6nckM0qeKI/hdh6t8+BEO8AKCkvcII4O/Xzx8/0hRVO1X6G+oWhyCtN8XBn6Y4xwXIKVAWSmQSl1tUa7I3f6aQ1q2qLWGkBJRJhEmCkFSI8klGJfgUkOpGsbUaIyBMQZar+iHHLKygdE16rpGzizeQ42/vjG8etzx7wfHu89wTigqKiCVgtHKfbx+c88nwazq8OOsndD3UOBbKPDqCbz5Ai+ewD/H9X+GIOYoKwalboW147OHtEeQaHiRgB9LeLFEEDGkRCAvFTKykRKFinLUN4KPQ6YdjpHGe8DhxxynVCLOBVKy2k2IcQG9h3wv9kUwo73L4csHw/HEEKYSpGSfPLnnqYdZ1bscvvkcr/6Wv1NSgTIOqXaRG4HfCha0u+YwSKQjTCSOZ4m04FCSw5jHod4Itp+K4sU/PXzbeQ8EXn0OP+IoSn6t7pNzqJxgTC7wzhwfQYYwyhBnFIQqFJVEXkpX6ZJKSCkf5tOdQ8It2m5A07SIU4I4LdFeeox2wDRuzJPFMltnp9HCWothGB5ykAbumeYZVFokZe86JqUjKmmhTI+mmx2XfsY4jnj2HKRZACxYlgVULfBzi2PcISYdMmqRc+s2WCHCgqkerB4d0ozgekLTDpim8ZHgjFNhEeYDlL5gmZ97c/+sGp8EWT0joyMyZkHlgEvXYVm2F/+ELx6ugkk1IiID4srCNC2wzNfdN3AjsGB5lsNKzfCzAR9JhyDrEZHOhT7vod97+/9GT4qy5dBLO5zJ4MQj0jvRaZrce/c5e1Ll2YWcsxEFX/M4IqUWcTm4ahPeuWNUyhFMWfT9cHXkloNqfqoLAxSsR8UbZFXjCsPqCbqdoZoZ0kxuXbfT7vGDc1jJCcM4oW0viHMOKhqoukHftbC2xzyNrjsm1yWjs+PeLY84JKSFqjWEEO5iinPtBuspVTin67QRDlJWqOuth7WbNBtfejlfh4PZRtHa19v44jsCXiRxPEl3j6SFQFHV1+tgtVyIX8/DuGjgRwznOEeeF+7ekEqDyxpcbIj9N9vX6yi7FfwPKQ3BT/UodQMAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="OpenRefine UI with lists of reconciliation candidates"
+        title="OpenRefine UI with lists of reconciliation candidates"
+        src="/static/d4191f055b104445a4c283e09a9ebec8/f058b/or4.png"
+        srcset="/static/d4191f055b104445a4c283e09a9ebec8/c26ae/or4.png 158w,
+/static/d4191f055b104445a4c283e09a9ebec8/6bdcf/or4.png 315w,
+/static/d4191f055b104445a4c283e09a9ebec8/f058b/or4.png 630w,
+/static/d4191f055b104445a4c283e09a9ebec8/40601/or4.png 945w,
+/static/d4191f055b104445a4c283e09a9ebec8/ad997/or4.png 1012w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">OpenRefine UI with lists of reconciliation candidates</figcaption>
+  </figure></p>
+<p>This already looks good!
+Now we can choose matches by clicking the checkmark or get additional information by hovering over the proposed entry from the reconcile service.</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/3400dd15c8f9dd3db28fa4ee867fedff/42d54/or5.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.55696202531645%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACBUlEQVQ4y32RWU/bQBRG8/9/RtWHtuprH9qqqBJCtCQiJMFZxltsvNvjZSZNwlJOZQeCIIWHT3Ol0Rydb27PdAJMJySXK9JcU0hNUWqKaoOst93Zpr3PpXq6fxmpGcwUvShbIXzFcF4wnEtsvyBMamZzl0tjwUK4CMsjzjTb7QatNUo1/42sGnqp3OJGG6a2ZOaWiGWJ8BSDwTlnZ7/p9/ucnBxzMbrEMAziKGS1WtE06iBaKXpJscEO1oxNycQsmbttGsaTS/pnpwg7xFo2GCJjPHVw/YSyqqmqCqVaULM/23RAJ1xjtIbOztD0NTNLYyxKTO8WP4FlfIcdNAivwQtyiiJ/BnzMk6GQjM2SidVW1xwdw9cj+PLtlvH8jjC/JkkLZFlT1c0zs0NguKts+5IgKgiSPwyNml/nKaeDv/w8hZl1Q13LZ4CXsB1QPlVeLEssT+IEmu8/Uj58FHz67PDuvcvFpGK91vu/etUwfjCcmJKpXXamU0dhGA3DQcboIud8kOK4Cq3Vq6A9MJUb3EdDt2SxlAhPExYQyV1CCYm8Y6Ubmu7h/2F7QytYMxJlt5SRkBiO7jbrx/f4yf1ujjZkeX5Q+QCYyS3LeI3tZZjLHOFmWL7iKuUBdt/NbnhNEEuqsny7shcpLL9GOBFBmJBnMWmu8FO46mA7wyi/QbeVm7cr/wPRcMi+E1rICwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Interative OpenRefine pop-up to define a match"
+        title="Interative OpenRefine pop-up to define a match"
+        src="/static/3400dd15c8f9dd3db28fa4ee867fedff/f058b/or5.png"
+        srcset="/static/3400dd15c8f9dd3db28fa4ee867fedff/c26ae/or5.png 158w,
+/static/3400dd15c8f9dd3db28fa4ee867fedff/6bdcf/or5.png 315w,
+/static/3400dd15c8f9dd3db28fa4ee867fedff/f058b/or5.png 630w,
+/static/3400dd15c8f9dd3db28fa4ee867fedff/42d54/or5.png 858w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Interative OpenRefine pop-up to define a match</figcaption>
+  </figure></p>
+<p>If we want, we can also search through our vocabulary by clicking “Search for match”:</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/cd12abcd7fdd02842fd5225eab7ceaf2/f5209/or6.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 46.202531645569614%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABoklEQVQoz32P6W4aMRRG5/0fBQgBHqA/qmwVyY+2QFhm3z2L7YFkKAlwqnGDVFVRLX0690q+x9fWdBbwtAj5vs54nAeE1RtpA0mDoak1xOpMrM+GkToR/5Wu7+6t4wYrjHOyojaR+oX3E5TbN+JUkGUZWZZTFCW1lNS15Hg88e85nc6Gutlize2UtZ8h5At5vaPcHtCv70gjqKnqmte25XA4sN/vP9Iatu0fHo9HOJ+RSmGFnktoL8lCj8hdI2IfKRL2W8V+p/m107SNxHEcPM9DCEGSpuR5TvrB7lGtNWEUY909PLFYPLNxHGzHxfV8KqkQRUmaCcM4SZhOp8xmM6qqMsOXKKXMbzre3N5hffn6jflqgxsmZKUkEZWhqDV5pSjVDj9KGQ6vGAwG9Ho9rq+vGY/HjEYjk66+9NbtwyMbN+DH/JnlxkV0EtkY5qWkVA1+lBhZv9837IYnk8mnsW7upyxtj/lyw8/FiigrKGRjZN2mXe2FCb1e3wi7/FfYbWj7IW4Qs7Jd1o6PG0QUtUbUikpvCeLuy0OuhkPDi/Az8W+XxoPlF1vQggAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Searching for a vocabulary term in OpenRefine"
+        title="Searching for a vocabulary term in OpenRefine"
+        src="/static/cd12abcd7fdd02842fd5225eab7ceaf2/f058b/or6.png"
+        srcset="/static/cd12abcd7fdd02842fd5225eab7ceaf2/c26ae/or6.png 158w,
+/static/cd12abcd7fdd02842fd5225eab7ceaf2/6bdcf/or6.png 315w,
+/static/cd12abcd7fdd02842fd5225eab7ceaf2/f058b/or6.png 630w,
+/static/cd12abcd7fdd02842fd5225eab7ceaf2/40601/or6.png 945w,
+/static/cd12abcd7fdd02842fd5225eab7ceaf2/f5209/or6.png 1061w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Searching for a vocabulary term in OpenRefine</figcaption>
+  </figure></p>
+<p>After selecting the appropriate matches we have successfully reconciled our data:</p>
+<p><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 340px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/bebfcfbdf5c6b5e0dcff2da7d6a615d4/9f933/or7.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 84.81012658227847%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAACy0lEQVQ4y4WTW2/bRhBG+f/fiyII0gAp0Ke8GPCD4biObER1U9uS66CNL0kkkqJ43wvvK9o6BVdKkIuNDnDwfTPYHQwXQyfKDNe3HW5g8AKJv1QsQv2FINKESUUqOpK8tfo1Sb7ROGuRxQonESuOjwtuPhh2dl/x9NmvPHv+Gz/9/AtPnr5gb/+Yk78uUeWaOGts0+9JRbtpqFc4YWrQ1ZpM3hFlrZ0miEoWYUEQFURpQ5jWZHJFKs2DZNKQCLOZMIwLPn7ymc0D5u4S1wu/xV9a5l6A6w36I0N9uJ/LFscLG4JYs0w0QbLRzywizcxX/8t8ofjoSfuejusrXo8yxic5x29yziaCyYVkdJzxx585qqjIRYWQFUI9Ti5KirLByTPF6WnK6duEv6cpF9PU6sk44d1lhmkLmqqgLDVFoSkfodCKuq5xslxx4wmuXcH7uWAWSJvf+ht/9m/G9CojzRRaa5TWVr9HKUVVVThlWZOIiijfkMqaTNdWddUQi5pc1/R9i+ka6rqhaX5kmK5tWxylen4/0IzfFJydVkzOK8bjgum05uKiZjqpLOfnFUL0DLFe82Dc39/jtO0ds1mH73X4fkcYGha+IVwaXLdjOfxBXkcQGOr6bttw/SC24erunqXomcWGT5Gx3ktXuMmKRPdc+Z2tf45HhttOuB7esCFKanTZIHSDLlvri6q1iKIhVw1d19E0HcZ09H1n80GHfKBpWowxOL4vODqKeX0YWfb2Qg5eRZajUczBwaa+s7NkNIoIQ8n+fsjubsjhYcRoFPPyZcB4HNN1NY6UmihWuJ5ksZDM55K5u2EZKmYziedLPE+yXCqE0NYHgbLnh5rrSuJ4u4fDfl3e5lzc5EyuMt7PBO8+5JbrueDtPxmTq9zuX10VdufquqCq9BeGvCi2ezh8d9sami1tt6U1dJ2hbjb14dyG1Vf+W/q+5z9ZqfhGhqCzCwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Matched values in OpenRefine column"
+        title="Matched values in OpenRefine column"
+        src="/static/bebfcfbdf5c6b5e0dcff2da7d6a615d4/9f933/or7.png"
+        srcset="/static/bebfcfbdf5c6b5e0dcff2da7d6a615d4/c26ae/or7.png 158w,
+/static/bebfcfbdf5c6b5e0dcff2da7d6a615d4/6bdcf/or7.png 315w,
+/static/bebfcfbdf5c6b5e0dcff2da7d6a615d4/9f933/or7.png 340w"
+        sizes="(max-width: 340px) 100vw, 340px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">Matched values in OpenRefine column</figcaption>
+  </figure></p>
+<h2>Further reads</h2>
+<p>Christel Annemieke Romein, Andreas Wagner and Joris J. van Zundert published a tutorial about <a href="https://doi.org/10.21825/dlh.85751">building and deploying a classification schema using open standards and technology</a>.
+In this tutorial they make use of SKOS, SkoHub Vocabs and SkoHub Reconcile.</p>
+<h2>Next steps</h2>
+<p>The services are currently in an <code class="language-text">alpha</code> phase and ready for testing.
+You can test the service under <a href="https://reconcile-publish.skohub.io/">https://reconcile-publish.skohub.io/</a>.</p>
+<p>Feedback is very much appreciated: via email (<a href="mailto:skohub@hbz-nrw.de">skohub@hbz-nrw.de</a>), as an <a href="https://github.com/skohub-io/skohub-reconcile/issues">issue</a> or – primarily for the German-speaking users – in the newly set up discourse forum <a href="https://metadaten.community/c/software-und-tools/skohub/9">metadaten.community</a>.</p>
+<h2>Repositories</h2>
+<ul>
+<li><a href="https://github.com/skohub-io/skohub-reconcile/">skoHub-reconcile</a></li>
+<li><a href="https://github.com/skohub-io/skohub-reconcile-publish/">skoHub-reconcile-publish</a></li>
+</ul>
+<p>[Edit 2025-03-27: Adjusted some screenshots and text to account for some changes in the UI.]</p>
+<div class="footnotes">
+<hr>
+<ol>
+<li id="fn-1">Since a <code class="language-text">lang</code> parameter has only been available since the <a href="https://reconciliation-api.github.io/specs/draft/#service-manifest">current draft</a> version of the reconciliation specification and not yet implemented in SkoHub Reconcile, the current version of the SkoHub Reconcile service requires you to specify a language you want to use for reconciliation. We hope to improve this in the future along with the development of the specification.<a href="#fnref-1" class="footnote-backref">↩</a></li>
+</ol>
+</div></section><hr/><footer><div class="bio"><div><p>A blog for SkoHub.<!-- --> <!-- -->This blog is maintained by <strong>the SkoHub Community</strong>.</p></div></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/2023-11-22-shacl-shape/">← <!-- -->Development of SKOS SHACL shape</a></li><li><a rel="next" href="/2024-01-24-uris-without-language-tags/">Re-working SkoHub Vocabs internationalization features<!-- --> →</a></li></ul></nav></main><footer><div class="wrapper-footer"><div class="footer-navigation"><ul><li><a href="/contact/">Contact</a></li><li><a href="https://skohub.io" target="_blank" rel="noreferrer">skohub.io</a></li><li><a href="/rss.xml">RSS-Feed</a></li><li><a href="https://openbiblio.social/@skohub">Mastodon <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="mastodon" class="svg-inline--fa fa-mastodon " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg></a></li><li><a href="https://metadaten.community/c/software-und-tools/metafacture/8">Discourse <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="discourse" class="svg-inline--fa fa-discourse " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M225.9 32C103.3 32 0 130.5 0 252.1 0 256 .1 480 .1 480l225.8-.2c122.7 0 222.1-102.3 222.1-223.9C448 134.3 348.6 32 225.9 32zM224 384c-19.4 0-37.9-4.3-54.4-12.1L88.5 392l22.9-75c-9.8-18.1-15.4-38.9-15.4-61 0-70.7 57.3-128 128-128s128 57.3 128 128-57.3 128-128 128z"></path></svg></a></li><li><a href="https://github.com/skohub-io">GitHub <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a></li></ul></div></div></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2024-01-18-reconcile/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-fe620b60292e32d725ed.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-46780dec3ea827d4d8e6.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-3f600f2fd850bd382202.js\"],\"component---src-pages-contact-js\":[\"/component---src-pages-contact-js-5c21a365d688463f3898.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-39a1a0f79cf5786e617b.js\"],\"component---src-pages-using-typescript-tsx\":[\"/component---src-pages-using-typescript-tsx-0e780893e2657d08bb50.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-6602a7d8cfc7be2778f4.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="a671f36031795c0731bf";</script><script src="/webpack-runtime-8c179305cae52ad85711.js" async></script><script src="/framework-f5cf36c7d70977c4e569.js" async></script><script src="/app-fe620b60292e32d725ed.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
